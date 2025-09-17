@@ -1,0 +1,18 @@
+.footer {
+  padding: 1.2rem 1rem 1.2rem 1rem;
+  background: #350a06;
+  color: #fff;
+  text-align: center;
+  font-size: 1.05rem;
+  border-top: none;
+  letter-spacing: 0.02em;
+  box-shadow: 0 -2px 8px rgba(53,10,6,0.08);
+}
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 0.95rem;
+    padding: 0.8rem 0.5rem;
+    line-height: 1.3;
+  }
+}
