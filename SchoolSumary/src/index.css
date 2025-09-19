@@ -3,32 +3,44 @@
 
 
 :root {
-  --font-main: 'Roboto', system-ui, Arial, sans-serif;
-  --color-main: #350a06;
-  --color-bg-light: #fff;
-  --color-bg-dark: #181818;
-  --color-text-light: #222;
-  --color-text-dark: #f5f5f5;
-  --color-accent: #350a06;
-  line-height: 1.5;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --dark-bg: #1a1d29;
+  --card-bg: #252836;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a3bd;
+  --border-color: #2d3142;
+  --hover-bg: #2d3142;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  --border-radius: 12px;
+  --glass-bg: rgba(37, 40, 54, 0.8);
+  --text-accent: #4facfe;
+  --shadow-light: 0 5px 15px rgba(0,0,0,0.1);
+  --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
-body {
-  font-family: var(--font-main);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body.theme-light {
-  background: var(--color-bg-light);
-  color: var(--color-text-light);
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
 }
 
-body.theme-dark {
-  background: var(--color-bg-dark);
-  color: var(--color-text-dark);
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0.5rem;
+  }
 }
 

@@ -1,0 +1,49 @@
+.card {
+  background: #f7f8fa;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  padding: 1.5rem;
+  color: #23263a;
+  margin: 1rem 0;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.icon {
+  font-size: 2rem;
+}
+.title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  color: #23263a;
+}
+.lessonList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.lessonItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #e0e3e8;
+}
+.lessonItem:last-child {
+  border-bottom: none;
+}
+.dot {
+  color: #4facfe;
+  font-weight: bold;
+  font-size: 1.1rem;
+}

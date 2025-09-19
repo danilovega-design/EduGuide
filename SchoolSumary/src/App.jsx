@@ -1,24 +1,24 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import HomeCards from './pages/HomeCards';
-import NivelPage from './pages/NivelPage';
-import UnidadPage from './pages/UnidadPage';
+import Navbar from './components/Navbar/navbar';
+import Header from './components/Header/Header';
+// import Footer from './components/Footer';
+import Home from './pages/Home/Home';
+import Syllabus from './pages/Syllabus/Syllabus';
+
 
 const App = () => (
-  <Router>
+  <Router basename="/EduGuide">
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Navbar />
       <Header />
-      <main style={{ flex: 1, padding: '2rem' }}>
+      <main className="mainContent">
         <Routes>
-          <Route path="/" element={<HomeCards />} />
-          <Route path=":nivel" element={<NivelPage />} />
-          <Route path="/nivel/:nivel/unidad/:unidad" element={<UnidadPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="EduGuide/syllabus/:nivel/:unidad" element={<Syllabus />} />
         </Routes>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   </Router>
 );

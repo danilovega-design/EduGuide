@@ -1,0 +1,362 @@
+.menuToggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+  background: var(--primary-gradient);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuToggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 769px) {
+  .menuToggle {
+    display: none;
+  }
+}
+
+/* Navbar Principal */
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh; /* Ocupa toda la pantalla */
+  background: #181a20;
+  transition: transform 0.3s;
+  z-index: 1000;
+  transform: translateX(0);
+  /* Elimina cualquier max-height o height:auto */
+}
+
+@media (min-width: 769px) {
+  .navbar {
+    width: 300px;
+    left: 0;
+    transform: translateX(0);
+    height: 100vh; /* Asegura que abarque todo el alto de la pantalla */
+    position: fixed; /* Fijo en pantalla */
+    top: 0;
+  }
+}
+
+/* Responsive: ocultar en móvil y ajustar altura */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100vw;
+    left: 0;
+    transform: translateX(-100vw);
+    height: 100vh; /* Ocupa toda la pantalla en móvil también */
+    max-height: none;
+    background: #181a20; /* Fondo oscuro también en móvil */
+    border-radius: 0 0 16px 16px; /* Opcional: bordes redondeados abajo */
+  }
+
+  .navbar.open {
+    transform: translateX(0);
+  }
+  /* El contenido no se tapa, el navbar se superpone solo cuando está abierto */
+}
+
+/* Header del Navbar */
+.navHeader {
+  padding: 1.1rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-gradient);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoIcon {
+  font-size: 2rem;
+  animation: pulse 2s infinite;
+}
+
+.logoText {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(90deg);
+}
+
+/* Contenido Principal */
+.navContent {
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
+}
+
+.navContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.navContent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.navContent::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+.unitsContainer {
+  padding: 0 1rem;
+}
+
+/* Unidades */
+.unitItem {
+  margin-bottom: 0.5rem;
+}
+
+.unitButton {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.unitButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-gradient);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.unitButton:hover::before,
+.unitButton.active::before {
+  left: 0;
+}
+
+.unitButton:hover,
+.unitButton.active {
+  color: var(--text-primary);
+  transform: translateX(4px);
+  background: var(--hover-bg);
+}
+
+.unitIcon {
+  font-size: 1.5rem;
+  min-width: 24px;
+}
+
+.unitTitle {
+  flex: 1;
+  text-align: left;
+}
+
+.arrow {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotated {
+  transform: rotate(180deg);
+}
+
+/* Lecciones */
+.lessonsContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  margin-left: 1rem;
+  border-left: 2px solid var(--border-color);
+}
+
+.lessonsContainer.expanded {
+  max-height: 300px;
+  padding: 0.5rem 0;
+}
+
+.lessonButton {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  margin-bottom: 0.25rem;
+}
+
+.lessonButton:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(4px);
+}
+
+.lessonDot {
+  color: #4facfe;
+  font-weight: bold;
+}
+
+/* Footer del Navbar */
+.navFooter {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  background: var(--card-bg);
+}
+
+.progress {
+  text-align: center;
+}
+
+.progressText {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background: var(--border-color);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Overlay solo en móvil */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 999;
+  display: block;
+}
+
+@media (min-width: 769px) {
+  .overlay {
+    display: none;
+  }
+}
+
+/* Animaciones */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100vw;
+    left: 0;
+    transform: translateX(-100vw);
+  }
+
+  .navbar.open {
+    transform: translateX(0);
+  }
+
+  .navHeader {
+    padding: 1rem;
+  }
+
+  .logoText {
+    font-size: 1.1rem;
+  }
+
+  .unitButton {
+    padding: 0.875rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar {
+    width: 300px;
+    left: 0;
+    transform: translateX(0);
+    height: 100vh; /* Asegura que abarque todo el alto de la pantalla */
+    position: fixed; /* Fijo en pantalla */
+    top: 0;
+  }
+}
+
+/* Estados de accesibilidad */
+.unitButton:focus,
+.lessonButton:focus,
+.menuToggle:focus,
+.closeBtn:focus {
+  outline: 2px solid #4facfe;
+  outline-offset: 2px;
+}
+

@@ -1,0 +1,100 @@
+.syllabusContainer {
+  width: 100%;
+  margin-left: 0;
+  padding: 2rem 0rem;
+  background: linear-gradient(135deg, #f7f8fa 60%, #e0e3e8 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+  /* Permite scroll vertical si hay muchos temas */
+  overflow-y: auto;
+}
+
+@media (min-width: 769px) {
+  .syllabusContainer {
+    margin-left: 300px;
+    width: calc(100vw - 24rem);
+    min-height: calc(100vh - 64px);
+    padding: 2rem 0rem;
+    overflow-y: auto;
+  }
+}
+
+/* Título mejorado */
+.selectedTitle {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  padding: 1.2rem 2.5rem;
+  border-radius: 18px;
+  margin: 2.5rem 0;
+  text-align: left;
+  letter-spacing: -0.03em;
+  box-shadow: 0 8px 24px rgba(79,172,254,0.15);
+  border-left: 8px solid #4facfe;
+  border-bottom: 3px solid #00f2fe;
+  transition: box-shadow 0.2s;
+}
+
+/* Grid para las cartas de temas */
+.themeList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  /* Permite que la lista crezca y se desplace si es necesario */
+}
+
+.themeItem {
+  font-size: 1.15rem;
+  color: #23263a;
+  background: #fff;
+  padding: 1.2rem 1.7rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(79,172,254,0.10), 0 1.5px 6px rgba(0,0,0,0.04);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0;
+  border: 2px solid #e0e3e8;
+  transition: transform 0.18s, box-shadow 0.18s;
+  position: relative;
+  overflow: hidden;
+}
+.themeItem:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(79,172,254,0.18), 0 2px 8px rgba(0,0,0,0.07);
+  border-color: #4facfe;
+  background: linear-gradient(90deg, #f7f8fa 80%, #e0e3e8 100%);
+}
+
+/* Animación sutil para las cartas */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.themeItem {
+  animation: fadeInUp 0.5s;
+}
+
+@media (max-width: 600px) {
+  .syllabusContainer {
+    padding: 1rem 0rem;
+    margin-left: 0;
+    width: 100%;
+    overflow-y: auto;
+  }
+  .selectedTitle {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+  }
+  .themeList {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .themeItem {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+}
