@@ -41,12 +41,18 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  padding: 0;
-  margin: 0;
-  /* Permite que la lista crezca y se desplace si es necesario */
+  padding: 0 1rem; /* <-- Agregamos espacio lateral */
+  margin: 0 auto; /* Centra el contenido */
+  max-width: 1200px; /* Opcional, limita el ancho */
 }
 
 .themeItem {
+  /* Usamos Flexbox para alinear el texto y el botón */
+  display: flex;
+  /* Alinea el texto y el botón verticalmente */
+  align-items: center;
+  /* Empuja el botón "Ver contenido" hacia el borde derecho */
+  justify-content: space-between; 
   font-size: 1.15rem;
   color: #23263a;
   background: #fff;
@@ -66,6 +72,20 @@
   box-shadow: 0 8px 32px rgba(79,172,254,0.18), 0 2px 8px rgba(0,0,0,0.07);
   border-color: #4facfe;
   background: linear-gradient(90deg, #f7f8fa 80%, #e0e3e8 100%);
+}
+
+/* Estilo del botón "Ver contenido" */
+.themeLink {
+  /* Añadimos un pequeño espacio a la izquierda para separarlo del texto */
+  margin-left: 1rem;
+  color: #4facfe;
+  text-decoration: underline;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* Evita que el texto del botón se separe en varias líneas si es muy largo */
+  white-space: nowrap;
 }
 
 /* Animación sutil para las cartas */

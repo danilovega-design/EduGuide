@@ -48,7 +48,7 @@ const defaultUnits = [
 				nombre: 'Unidad 1',
 				temas: [
 					{ nombre: 'Formato en Word', file: 'tema1.html'},
-					{ nombre: 'Formato en Word1', file: 'Funciones Condicionales.html'}
+					{ nombre: 'Formato en Word1', file: ''}
 					
 					
 				]
