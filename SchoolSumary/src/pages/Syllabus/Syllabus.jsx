@@ -11,7 +11,7 @@ const defaultUnits = [
 				nombre: 'Unidad 1',
 				temas: [
 					// Corrige aquí: solo el nombre del archivo
-					{ nombre: 'Conceptos básicos', file: '' },
+					{ nombre: 'Conceptos básicos', file: 'tema1.html' },
 					{ nombre: 'Historia de la robótica', file: '' },
 					{ nombre: 'Intruducción al Escritorio', file: 'uso-librerias.html' }
 					
@@ -47,7 +47,9 @@ const defaultUnits = [
 			{
 				nombre: 'Unidad 1',
 				temas: [
-					{ nombre: 'Formato en Word', file: 'tema1.html'}
+					{ nombre: 'Formato en Word', file: 'tema1.html'},
+					{ nombre: 'Formato en Word1', file: 'Funciones Condicionales.html'}
+					
 					
 				]
 			},
