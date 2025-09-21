@@ -11,8 +11,10 @@ const defaultUnits = [
 				nombre: 'Unidad 1',
 				temas: [
 					// Corrige aquí: solo el nombre del archivo
-					{ nombre: 'Conceptos básicos', file: 'uso-librerias.html' },
-					{ nombre: 'Historia de la robótica', file: '' }
+					{ nombre: 'Conceptos básicos', file: '' },
+					{ nombre: 'Historia de la robótica', file: '' },
+					{ nombre: 'Intruducción al Escritorio', file: 'uso-librerias.html' }
+					
 				]
 			},
 			{
@@ -45,8 +47,7 @@ const defaultUnits = [
 			{
 				nombre: 'Unidad 1',
 				temas: [
-					{ nombre: 'Sensores de distancia', file: '' },
-					{ nombre: 'Motores servo', file: '' }
+					
 				]
 			},
 			{
@@ -113,7 +114,7 @@ const defaultUnits = [
 			{
 				nombre: 'Unidad 1',
 				temas: [
-					{ nombre: 'Robot seguidor de línea', file: '' },
+					{ nombre: 'Funciones excel', file: 'Funciones Condicionales.html' },
 					{ nombre: 'Brazo robótico', file: '' }
 				]
 			},
