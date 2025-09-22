@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía de Estudio: Funciones Condicionales</title>
+    <title>Guía de Estudio Bilingüe: Funciones Condicionales / 双语学习指南：条件函数</title>
     <style>
         body {
             font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -28,10 +28,26 @@
             color: #0056b3;
             font-size: 2.8em;
             font-weight: 700;
+            margin-bottom: 5px; /* Ajuste para subtítulo */
         }
         .header .subtitle {
             font-size: 1.3em;
             color: #6c757d;
+        }
+        /* Estilo para el subtítulo en chino */
+        .chinese-subtitle {
+            display: block; /* Para que aparezca en una nueva línea */
+            font-size: 0.6em; /* Más pequeño que el texto principal */
+            color: #888;   /* Un color gris para que sea secundario */
+            font-weight: normal;
+            margin-top: 5px;
+        }
+        h2 .chinese-subtitle {
+             font-size: 0.7em;
+        }
+        h3 .chinese-subtitle {
+            font-size: 0.8em;
+            margin-top: 2px;
         }
         .function-card {
             background-color: #ffffff;
@@ -162,107 +178,98 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Tu Guía de Estudio para Excel</h1>
-            <p class="subtitle">¡Conviértete en un maestro de las decisiones lógicas!</p>
+            <h1>Tu Guía de Estudio para Excel<span class="chinese-subtitle">你的 Excel 学习指南</span></h1>
+            <p class="subtitle">¡Conviértete en un maestro de las decisiones lógicas!<span class="chinese-subtitle">成为逻辑决策大师！</span></p>
         </div>
 
         <div class="cosmovision">
-            <strong>Un Pensamiento Clave:</strong> Así como un videojuego tiene reglas y la música sigue un orden para sonar bien, nuestras vidas también funcionan mejor cuando seguimos buenos principios. Las funciones lógicas de Excel nos enseñan a pensar con orden, una habilidad que nos ayuda a tomar decisiones más sabias y a seguir el camino que Dios ha trazado para nosotros.
+            <strong>Un Pensamiento Clave:<span class="chinese-subtitle">一个关键思想</span></strong> Así como un videojuego tiene reglas y la música sigue un orden para sonar bien, nuestras vidas también funcionan mejor cuando seguimos buenos principios. Las funciones lógicas de Excel nos enseñan a pensar con orden, una habilidad que nos ayuda a tomar decisiones más sabias y a seguir el camino que Dios ha trazado para nosotros.<span class="chinese-subtitle">就像电子游戏有规则，音乐遵循顺序才能悦耳一样，当我们遵循好的原则时，我们的生活也会更美好。Excel 的逻辑函数教会我们有序思考，这项技能帮助我们做出更明智的决定，并遵循上帝为我们规划的道路。</span>
         </div>
         
-        <!-- Recurso Adicional: Podcast -->
         <div class="podcast-section">
-            <h3>🎙️ Recurso Adicional</h3>
-            <p>Explora más sobre cómo la tecnología y la fe pueden trabajar juntas.</p>
-            <a href="https://spotifycreators-web.app.link/e/YNYDiTHsKWb" target="_blank">Escuchar Podcast en Spotify</a>
+            <h3>🎙️ Recurso Adicional<span class="chinese-subtitle">附加资源</span></h3>
+            <p>Explora más sobre cómo la tecnología y la fe pueden trabajar juntas.<span class="chinese-subtitle">探索更多关于科技与信仰如何协同工作的内容。</span></p>
+            <a href="https://spotifycreators-web.app.link/e/YNYDiTHsKWb" target="_blank">Escuchar Podcast en Spotify<span class="chinese-subtitle">在 Spotify 上收听播客</span></a>
         </div>
 
-        <!-- Función SI -->
         <div class="function-card si">
-            <h2>El Detective: Función SI</h2>
-            <p class="purpose">Toma una decisión entre dos caminos posibles.</p>
-            <p>La función SI revisa una condición. Si es VERDADERA, hace una cosa. Si es FALSA, hace otra. ¡Simple y poderoso!</p>
+            <h2>El Detective: Función SI<span class="chinese-subtitle">侦探：IF 函数</span></h2>
+            <p class="purpose">Toma una decisión entre dos caminos posibles.<span class="chinese-subtitle">在两条可能的路径之间做出决定。</span></p>
+            <p>La función SI revisa una condición. Si es VERDADERA, hace una cosa. Si es FALSA, hace otra. ¡Simple y poderoso!<span class="chinese-subtitle">IF 函数检查一个条件。如果条件为真 (TRUE)，它会做一件事。如果条件为假 (FALSE)，它会做另一件事。简单而强大！</span></p>
             <p class="syntax">=SI(condición_a_revisar; qué_pasa_si_es_verdad; qué_pasa_si_es_falso)</p>
             <div class="example-box">
-                <strong>Ejemplo:</strong> ¿Pasaste la materia? (Se aprueba con 7 o más).
+                <strong>Ejemplo:<span class="chinese-subtitle">例子</span></strong> ¿Pasaste la materia? (Se aprueba con 7 o más).<span class="chinese-subtitle">你这门课及格了吗？（7分或以上及格）。</span>
                 <p>Si tu nota está en la celda B2, la fórmula sería:<br><code>=SI(B2>=7; "Aprobado"; "A estudiar más")</code></p>
             </div>
         </div>
 
-        <!-- Función Y -->
         <div class="function-card y">
-            <h2>El Club Exclusivo: Función Y</h2>
-            <p class="purpose">Se asegura de que TODAS las condiciones se cumplan a la vez.</p>
-            <p>La función Y es muy estricta. Para que te diga que algo es verdadero, tienes que cumplir con TODOS sus requisitos sin excepción.</p>
+            <h2>El Club Exclusivo: Función Y<span class="chinese-subtitle">专属俱乐部：AND 函数</span></h2>
+            <p class="purpose">Se asegura de que TODAS las condiciones se cumplan a la vez.<span class="chinese-subtitle">确保所有条件同时满足。</span></p>
+            <p>La función Y es muy estricta. Para que te diga que algo es verdadero, tienes que cumplir con TODOS sus requisitos sin excepción.<span class="chinese-subtitle">AND 函数非常严格。要让它告诉你某事为真，你必须无一例外地满足其所有要求。</span></p>
             <p class="syntax">=SI(Y(condición1; condición2); "Si se cumplen AMBAS"; "Si falla al menos una")</p>
             <div class="example-box">
-                <strong>Ejemplo:</strong> ¿Ganas el premio mayor? Necesitas más de 1000 puntos (celda B2) Y llegar al nivel 10 (celda C2).
+                <strong>Ejemplo:<span class="chinese-subtitle">例子</span></strong> ¿Ganas el premio mayor? Necesitas más de 1000 puntos (celda B2) Y llegar al nivel 10 (celda C2).<span class="chinese-subtitle">你能赢得大奖吗？你需要超过 1000 分（单元格 B2）并且达到第 10 级（单元格 C2）。</span>
                 <p>La fórmula sería:<br><code>=SI(Y(B2>1000; C2=10); "¡Premio Mayor!"; "Sigue jugando")</code></p>
             </div>
         </div>
 
-        <!-- Función O -->
         <div class="function-card o">
-            <h2>El Comprensivo: Función O</h2>
-            <p class="purpose">Verifica si AL MENOS UNA de las condiciones se cumple.</p>
-            <p>A la función O le basta con que cumplas una sola de sus condiciones para darte una respuesta positiva. ¡Es muy flexible!</p>
+            <h2>El Comprensivo: Función O<span class="chinese-subtitle">宽容者：OR 函数</span></h2>
+            <p class="purpose">Verifica si AL MENOS UNA de las condiciones se cumple.<span class="chinese-subtitle">检查是否至少有一个条件满足。</span></p>
+            <p>A la función O le basta con que cumplas una sola de sus condiciones para darte una respuesta positiva. ¡Es muy flexible!<span class="chinese-subtitle">对于 OR 函数来说，只要你满足它的一个条件，它就会给你一个肯定的答复。非常灵活！</span></p>
             <p class="syntax">=SI(O(condición1; condición2); "Si se cumple CUALQUIERA"; "Si no se cumple NINGUNA")</p>
             <div class="example-box">
-                <strong>Ejemplo:</strong> ¿Tienes descuento en la tienda? Si eres estudiante (celda B2="Sí") O es martes (celda C2="Martes").
+                <strong>Ejemplo:<span class="chinese-subtitle">例子</span></strong> ¿Tienes descuento en la tienda? Si eres estudiante (celda B2="Sí") O es martes (celda C2="Martes").<span class="chinese-subtitle">你在商店有折扣吗？如果你是学生（单元格 B2="是"）或者是星期二（单元格 C2="星期二"）。</span>
                 <p>La fórmula sería:<br><code>=SI(O(B2="Sí"; C2="Martes"); "¡Tienes Descuento!"; "Precio Normal")</code></p>
             </div>
         </div>
 
-        <!-- Función SI.CONJUNTO -->
         <div class="function-card si-conjunto">
-            <h2>El Gran Organizador: Función SI.CONJUNTO</h2>
-            <p class="purpose">Clasifica algo en varias categorías diferentes.</p>
-            <p>Es la mejor forma de evitar hacer un <code>=SI(SI(SI(...)))</code> larguísimo. Revisa una lista de condiciones en orden y se detiene en la primera que sea verdadera.</p>
+            <h2>El Gran Organizador: Función SI.CONJUNTO<span class="chinese-subtitle">伟大的组织者：IFS 函数</span></h2>
+            <p class="purpose">Clasifica algo en varias categorías diferentes.<span class="chinese-subtitle">将某物分类到几个不同的类别中。</span></p>
+            <p>Es la mejor forma de evitar hacer un <code>=SI(SI(SI(...)))</code> larguísimo. Revisa una lista de condiciones en orden y se detiene en la primera que sea verdadera.<span class="chinese-subtitle">这是避免写一个很长的 <code>=IF(IF(IF(...)))</code> 的最佳方法。它按顺序检查一系列条件，并在第一个为真的条件处停止。</span></p>
             <p class="syntax">=SI.CONJUNTO(condición1; resultado1; condición2; resultado2; ...)</p>
             <div class="example-box">
-                <strong>Ejemplo:</strong> Clasificar un puntaje de un juego (en celda B2).
+                <strong>Ejemplo:<span class="chinese-subtitle">例子</span></strong> Clasificar un puntaje de un juego (en celda B2).<span class="chinese-subtitle">对游戏得分进行分类（在单元格 B2 中）。</span>
                 <p>La fórmula sería:<br><code>=SI.CONJUNTO(B2>90; "Nivel Experto"; B2>70; "Nivel Avanzado"; B2>50; "Nivel Intermedio"; B2<=50; "Nivel Principiante")</code></p>
             </div>
         </div>
 
-        <!-- Consejos y Errores -->
         <div class="tips-errors">
             <div class="column tips">
-                <h3>✔ Consejos de Experto</h3>
+                <h3>✔ Consejos de Experto<span class="chinese-subtitle">专家提示</span></h3>
                 <ul>
-                    <li><strong>¡Las comillas son clave!</strong> Todo texto que escribas dentro de una fórmula (como "Aprobado") DEBE ir entre comillas dobles <code>" "</code>. Los números, no.</li>
-                    <li><strong>El orden importa.</strong> En <code>SI.CONJUNTO</code>, siempre pon la condición más específica o más alta primero, ya que Excel se detiene en la primera que encuentra.</li>
-                    <li><strong>Arrastra y Ahorra Tiempo:</strong> Una vez que tu fórmula funciona en la primera fila, haz clic en el pequeño cuadrito en la esquina inferior derecha de la celda y arrastra hacia abajo para aplicarla a toda la columna.</li>
-                    <li><strong>Usa paréntesis para aclarar:</strong> Si combinas muchas funciones, usar paréntesis extra puede ayudarte a mantener el orden y no perderte.</li>
+                    <li><strong>¡Las comillas son clave!<span class="chinese-subtitle">引号是关键！</span></strong> Todo texto que escribas dentro de una fórmula (como "Aprobado") DEBE ir entre comillas dobles <code>" "</code>. Los números, no.<span class="chinese-subtitle">你在公式中输入的任何文本（如“及格”）都必须用双引号 <code>" "</code> 括起来。数字则不需要。</span></li>
+                    <li><strong>El orden importa.<span class="chinese-subtitle">顺序很重要。</span></strong> En <code>SI.CONJUNTO</code>, siempre pon la condición más específica o más alta primero, ya que Excel se detiene en la primera que encuentra.<span class="chinese-subtitle">在 <code>IFS</code> 函数中，总是先放最具体或最高的条件，因为 Excel 会在找到的第一个满足条件的选项处停止。</span></li>
+                    <li><strong>Arrastra y Ahorra Tiempo:<span class="chinese-subtitle">拖动以节省时间</span></strong> Una vez que tu fórmula funciona en la primera fila, haz clic en el pequeño cuadrito en la esquina inferior derecha de la celda y arrastra hacia abajo para aplicarla a toda la columna.<span class="chinese-subtitle">一旦你的公式在第一行正常工作，点击单元格右下角的小方块并向下拖动，以将其应用于整列。</span></li>
+                    <li><strong>Usa paréntesis para aclarar:<span class="chinese-subtitle">使用括号以明确</span></strong> Si combinas muchas funciones, usar paréntesis extra puede ayudarte a mantener el orden y no perderte.<span class="chinese-subtitle">如果你组合了许多函数，使用额外的括号可以帮助你保持秩序，避免迷失。</span></li>
                 </ul>
             </div>
             <div class="column errors">
-                <h3>❌ ¡Cuidado con los Errores!</h3>
+                <h3>❌ ¡Cuidado con los Errores!<span class="chinese-subtitle">小心错误！</span></h3>
                 <ul>
-                    <li><strong>Error de comas y puntos.</strong> Dependiendo de cómo esté configurado tu Excel, puede que use coma (<code>,</code>) o punto y coma (<code>;</code>) para separar los argumentos. Si la fórmula da error, ¡prueba a cambiarlo!</li>
-                    <li><strong>Paréntesis sin pareja.</strong> Cada paréntesis que abres <code>(</code> debe tener su pareja que cierra <code>)</code>. Excel suele colorearlos para ayudarte.</li>
-                    <li><strong>El texto sin comillas.</strong> Escribir <code>=SI(B2>7; Aprobado; ...)</code> dará un error <code>#¿NOMBRE?</code> porque Excel piensa que "Aprobado" es el nombre de otra fórmula.</li>
-                    <li><strong>Operadores incorrectos.</strong> Asegúrate de usar bien los símbolos: <code>></code> (mayor que), <code><</code> (menor que), <code>>=</code> (mayor o igual que), <code><=</code> (menor o igual que), <code>=</code> (igual a) y <code><></code> (diferente de).</li>
+                    <li><strong>Error de comas y puntos.<span class="chinese-subtitle">逗号和分号的错误。</span></strong> Dependiendo de cómo esté configurado tu Excel, puede que use coma (<code>,</code>) o punto y coma (<code>;</code>) para separar los argumentos. Si la fórmula da error, ¡prueba a cambiarlo!<span class="chinese-subtitle">根据你的 Excel 设置，它可能使用逗号 (<code>,</code>) 或分号 (<code>;</code>) 来分隔参数。如果公式出错，请尝试更换！</span></li>
+                    <li><strong>Paréntesis sin pareja.<span class="chinese-subtitle">括号不成对。</span></strong> Cada paréntesis que abres <code>(</code> debe tener su pareja que cierra <code>)</code>. Excel suele colorearlos para ayudarte.<span class="chinese-subtitle">每个打开的括号 <code>(</code> 都必须有一个关闭的括号 <code>)</code>。Excel 通常会用颜色来帮助你。</span></li>
+                    <li><strong>El texto sin comillas.<span class="chinese-subtitle">没有引号的文本。</span></strong> Escribir <code>=SI(B2>7; Aprobado; ...)</code> dará un error <code>#¿NOMBRE?</code> porque Excel piensa que "Aprobado" es el nombre de otra fórmula.<span class="chinese-subtitle">写入 <code>=SI(B2>7, 及格, ...)</code> 会导致 <code>#NAME?</code> 错误，因为 Excel 认为“及格”是另一个公式的名称。</span></li>
+                    <li><strong>Operadores incorrectos.<span class="chinese-subtitle">不正确的运算符。</span></strong> Asegúrate de usar bien los símbolos: <code>></code> (mayor que), <code><</code> (menor que), <code>>=</code> (mayor o igual que), <code><=</code> (menor o igual que), <code>=</code> (igual a) y <code><></code> (diferente de).<span class="chinese-subtitle">确保正确使用符号：<code>></code> (大于), <code><</code> (小于), <code>>=</code> (大于或等于), <code><=</code> (小于或等于), <code>=</code> (等于) 和 <code><></code> (不等于)。</span></li>
                 </ul>
             </div>
         </div>
         
-        <!-- Misión Final -->
         <div class="final-mission">
-            <h2>Misión Final en Casa: Administrador de Inventario de Videojuego</h2>
-            <p>Imagina que estás creando la base de datos para tu propio videojuego. Tienes una tabla con los ítems de tu inventario. ¡Tu misión es usar fórmulas para organizarla!</p>
-            <p>Abre Excel y crea una tabla pequeña como esta:</p>
-            <!-- Aquí puedes poner una tabla de ejemplo -->
-            <p><strong>Tus Tareas:</strong></p>
+            <h2>Misión Final en Casa: Administrador de Inventario de Videojuego<span class="chinese-subtitle">家庭最终任务：电子游戏库存管理器</span></h2>
+            <p>Imagina que estás creando la base de datos para tu propio videojuego. Tienes una tabla con los ítems de tu inventario. ¡Tu misión es usar fórmulas para organizarla!<span class="chinese-subtitle">想象一下，你正在为自己的电子游戏创建数据库。你有一个包含库存物品的表格。你的任务是使用公式来组织它！</span></p>
+            <p>Abre Excel y crea una tabla pequeña como esta:<span class="chinese-subtitle">打开 Excel 并创建一个像这样的小表格：</span></p>
+            <p><strong>Tus Tareas:<span class="chinese-subtitle">你的任务：</span></strong></p>
             <ol>
-                <li><strong>Columna "Equipo para Novatos":</strong> Escribe una fórmula que muestre "Recomendado" si el nivel requerido es menor a 10 <strong>O</strong> si el tipo es "Poción". De lo contrario, que muestre "Solo para expertos".</li>
-                <li><strong>Columna "Ítem Legendario":</strong> Un ítem es legendario solo si su rareza es "Épica" <strong>Y</strong> su nivel requerido es mayor a 50. Tu fórmula debe mostrar "LEGENDARIO" o "Común".</li>
-                <li><strong>Columna "Clasificación de Poder":</strong> Usa <code>SI.CONJUNTO</code> para clasificar los ítems según su nivel requerido: si es > 40 "Poder Divino", si es > 20 "Poder Alto", y si no, "Poder Básico".</li>
+                <li><strong>Columna "Equipo para Novatos":<span class="chinese-subtitle">“新手装备”列：</span></strong> Escribe una fórmula que muestre "Recomendado" si el nivel requerido es menor a 10 <strong>O</strong> si el tipo es "Poción". De lo contrario, que muestre "Solo para expertos".<span class="chinese-subtitle">编写一个公式，如果所需等级小于 10 <strong>或</strong> 类型是“药水”，则显示“推荐”。否则，显示“仅限专家”。</span></li>
+                <li><strong>Columna "Ítem Legendario":<span class="chinese-subtitle">“传奇物品”列：</span></strong> Un ítem es legendario solo si su rareza es "Épica" <strong>Y</strong> su nivel requerido es mayor a 50. Tu fórmula debe mostrar "LEGENDARIO" o "Común".<span class="chinese-subtitle">一个物品只有当其稀有度是“史诗”<strong>并且</strong>其所需等级大于 50 时才是传奇的。你的公式必须显示“传奇”或“普通”。</span></li>
+                <li><strong>Columna "Clasificación de Poder":<span class="chinese-subtitle">“力量评级”列：</span></strong> Usa <code>SI.CONJUNTO</code> para clasificar los ítems según su nivel requerido: si es > 40 "Poder Divino", si es > 20 "Poder Alto", y si no, "Poder Básico".<span class="chinese-subtitle">使用 <code>IFS</code> 根据所需等级对物品进行评级：如果 > 40 则为“神力”，如果 > 20 则为“高等力量”，否则为“基础力量”。</span></li>
             </ol>
-            <p><strong>¡Demuestra lo que aprendiste y ordena tu inventario como un verdadero profesional!</strong></p>
+            <p><strong>¡Demuestra lo que aprendiste y ordena tu inventario como un verdadero profesional!<span class="chinese-subtitle">展示你所学的知识，像真正的专业人士一样整理你的库存！</span></strong></p>
         </div>
 
     </div>
 </body>
 </html>
-
