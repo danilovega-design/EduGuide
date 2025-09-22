@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word: Tablas e Imágenes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-button {
+            background-color: #6366f1;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        .nav-button:hover {
+            background-color: #4f46e5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .active-button {
+            background-color: #3b82f6;
+        }
+        .card {
+            background-color: #e0f2fe;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-top: 1.5rem;
+        }
+        .step-box {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+        }
+        .question-box {
+            background-color: #e0e7ff;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-top: 1.5rem;
+        }
+        .option-button {
+            background-color: #bfdbfe;
+            color: #1e40af;
+            font-weight: 600;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            width: 100%;
+            text-align: left;
+            transition: background-color 0.2s;
+        }
+        .option-button:hover {
+            background-color: #93c5fd;
+        }
+        .correct-answer {
+            background-color: #86efac;
+            color: #166534;
+        }
+        .wrong-answer {
+            background-color: #fca5a5;
+            color: #991b1b;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 sm:p-8">
+
+    <div class="container">
+        <!-- Título principal -->
+        <div class="text-center mb-6">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800">¡Aprende y Juega con Word!</h1>
+            <p class="mt-2 text-lg text-gray-600">Tablas e Imágenes</p>
+        </div>
+
+        <!-- Barra de navegación -->
+        <div class="flex justify-center space-x-4 mb-6">
+            <button id="lesson-btn" class="nav-button active-button" onclick="showSection('lesson')">Lección</button>
+            <button id="challenge-btn" class="nav-button" onclick="showSection('challenge')">Desafío</button>
+            <button id="tips-btn" class="nav-button" onclick="showSection('tips')">Consejos</button>
+        </div>
+
+        <!-- Contenido de la Lección -->
+        <div id="lesson-section">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4 text-center sm:text-left">Lección: Cómo Usar Tablas e Imágenes</h2>
+            
+            <div class="card">
+                <h3 class="text-xl font-bold text-blue-800 mb-2">Paso 1: ¡Inserta una Tabla! 📊</h3>
+                <p>Las tablas son como cajas mágicas para organizar información de forma ordenada. ¡Aprende a crearlas!</p>
+                <div class="step-box mt-4">
+                    <p class="font-semibold text-gray-700">1. Ve a la pestaña <span class="text-indigo-600">"Insertar"</span> en la parte superior.</p>
+                    <p class="font-semibold text-gray-700">2. Haz clic en el botón <span class="text-indigo-600">"Tabla"</span>. Verás dos opciones principales:</p>
+                    <ul class="list-disc pl-8 mt-2 text-gray-600">
+                        <li>**Opción A (Rápida):** Pasa el cursor sobre la cuadrícula y arrastra para seleccionar el número de filas y columnas que necesites. ¡Es la forma más fácil!</li>
+                        <li>**Opción B (Precisa):** Haz clic en <span class="text-indigo-600">"Insertar tabla"</span> y escribe el número exacto de filas y columnas en la ventana que aparece.</li>
+                    </ul>
+                    <p class="font-semibold text-gray-700 mt-2">3. ¡Listo! Tu tabla aparecerá en el documento.</p>
+                </div>
+                
+            </div>
+
+            <div class="card">
+                <h3 class="text-xl font-bold text-blue-800 mb-2">Paso 2: ¡Agrega una Imagen! 🖼️</h3>
+                <p>Las imágenes hacen tus documentos más divertidos y visuales. Aquí te decimos cómo agregarlas sin problemas.</p>
+                <div class="step-box mt-4">
+                    <p class="font-semibold text-gray-700">1. Haz clic en el lugar del documento donde quieres que aparezca la imagen.</p>
+                    <p class="font-semibold text-gray-700">2. Ve a la pestaña <span class="text-indigo-600">"Insertar"</span>.</p>
+                    <p class="font-semibold text-gray-700">3. Haz clic en <span class="text-indigo-600">"Imágenes"</span> y elige <span class="text-indigo-600">"Este dispositivo"</span> para buscar una imagen en tu computadora.</p>
+                    <p class="font-semibold text-gray-700">4. ¡Selecciona tu imagen y listo! Aparecerá en tu documento.</p>
+                </div>
+                
+            </div>
+
+            <div class="card">
+                <h3 class="text-xl font-bold text-blue-800 mb-2">Paso 3: ¡Ajusta tu Imagen! ✨</h3>
+                <p>Para que la imagen no desordene tu texto, usa el botón de "Opciones de diseño" que aparece al lado de la imagen.</p>
+                <div class="step-box mt-4">
+                    <p class="font-semibold text-gray-700">1. Haz clic en la imagen que insertaste. Verás un pequeño ícono de un cuadrado con líneas a su alrededor.</p>
+                    <p class="font-semibold text-gray-700">2. Haz clic en ese ícono para ver las opciones de ajuste. Las más útiles son:</p>
+                    <ul class="list-disc pl-8 mt-2 text-gray-600">
+                        <li>**Cuadrado:** El texto se acomoda alrededor de la imagen, como si la imagen fuera un bloque en el centro.</li>
+                        <li>**Transparente:** El texto se ajusta a la forma real de la imagen, sin dejar espacio extra.</li>
+                        <li>**Delante del texto:** La imagen queda encima del texto y la puedes mover a cualquier lugar libremente.</li>
+                    </ul>
+                    <p class="font-semibold text-gray-700 mt-2">¡Practica para ver cuál funciona mejor en cada caso!</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Contenido del Desafío -->
+        <div id="challenge-section" class="hidden">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4 text-center sm:text-left">¡Desafío! Pon a Prueba tu Memoria</h2>
+            
+            <div class="question-box">
+                <p class="font-bold text-lg text-blue-800 mb-2">Pregunta 1: ¿Qué pestaña usas para crear una tabla o insertar una imagen?</p>
+                <button class="option-button" onclick="checkAnswer(this, 1, 'B')">A) Inicio</button>
+                <button class="option-button" onclick="checkAnswer(this, 1, 'B')">B) Insertar</button>
+                <button class="option-button" onclick="checkAnswer(this, 1, 'B')">C) Diseño de página</button>
+            </div>
+
+            <div class="question-box">
+                <p class="font-bold text-lg text-blue-800 mb-2">Pregunta 2: Si una imagen está desordenando tu texto, ¿qué opción debes usar?</p>
+                <button class="option-button" onclick="checkAnswer(this, 2, 'A')">A) Ajustar texto</button>
+                <button class="option-button" onclick="checkAnswer(this, 2, 'A')">B) Tamaño de la fuente</button>
+                <button class="option-button" onclick="checkAnswer(this, 2, 'A')">C) Estilos de la tabla</button>
+            </div>
+            <div class="mt-4 text-center">
+                <p id="feedback" class="font-bold text-lg"></p>
+            </div>
+        </div>
+
+        <!-- Contenido de Consejos -->
+        <div id="tips-section" class="hidden">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4 text-center sm:text-left">Consejos de un Experto</h2>
+            
+            <div class="card">
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><span class="font-bold">Guarda tu trabajo:</span> ¡No olvides guardar tu documento! Es como guardar tu progreso en un juego.
+                        <ul class="list-disc pl-8 mt-1 text-gray-600">
+                            <li>Ve a la pestaña **"Archivo"**.</li>
+                            <li>Selecciona **"Guardar como"**.</li>
+                            <li>Elige la carpeta donde quieres guardarlo y ponle un nombre.</li>
+                            <li>¡También puedes usar el atajo **Ctrl + G** para guardar rápido!</li>
+                        </ul>
+                    </li>
+                    <li class="mt-4"><span class="font-bold">Pinta tus celdas:</span> ¡Dale un poco de color a tus tablas para que se vean geniales!
+                        <ul class="list-disc pl-8 mt-1 text-gray-600">
+                            <li>Haz clic en cualquier parte de la tabla. Verás que aparece una nueva pestaña llamada **"Herramientas de tabla"**.</li>
+                            <li>Haz clic en esa pestaña y luego ve a la subpestaña **"Diseño"**.</li>
+                            <li>Busca el ícono de un bote de pintura que dice **"Sombreado"**.</li>
+                            <li>Elige el color que más te guste para la celda o las celdas que seleccionaste.</li>
+                        </ul>
+                    </li>
+                    <li class="mt-4"><span class="font-bold">¡Experimenta!:</span> No tengas miedo de probar las herramientas. Así es como descubres cosas nuevas en Word.</li>
+                </ul>
+            </div>
+            
+            <div class="mt-8 text-center text-gray-600">
+                <p>Recuerda que estas habilidades te ayudan a ser más <span class="font-bold text-purple-600">ordenado</span> y <span class="font-bold text-purple-600">disciplinado</span> en tu trabajo.</p>
+                <p>Usar tus talentos, incluso en la tecnología, es una forma de servir a Dios y a los demás.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const sections = ['lesson', 'challenge', 'tips'];
+        const sectionMap = {
+            'lesson': document.getElementById('lesson-section'),
+            'challenge': document.getElementById('challenge-section'),
+            'tips': document.getElementById('tips-section')
+        };
+        const buttonMap = {
+            'lesson': document.getElementById('lesson-btn'),
+            'challenge': document.getElementById('challenge-btn'),
+            'tips': document.getElementById('tips-btn')
+        };
+        let score = 0;
+        const correctAnswers = {
+            1: 'B',
+            2: 'A'
+        };
+
+        function showSection(section) {
+            sections.forEach(s => {
+                sectionMap[s].classList.add('hidden');
+                buttonMap[s].classList.remove('active-button');
+            });
+            sectionMap[section].classList.remove('hidden');
+            buttonMap[section].classList.add('active-button');
+        }
+
+        function checkAnswer(button, questionNumber, correctAnswer) {
+            const isCorrect = button.textContent.trim().startsWith(correctAnswer);
+            const parent = button.parentElement;
+            const buttons = parent.querySelectorAll('.option-button');
+            const feedbackText = document.getElementById('feedback');
+
+            buttons.forEach(btn => {
+                btn.disabled = true;
+                if (btn.textContent.trim().startsWith(correctAnswer)) {
+                    btn.classList.add('correct-answer');
+                } else {
+                    btn.classList.add('wrong-answer');
+                }
+            });
+
+            if (isCorrect) {
+                score++;
+            }
+
+            if (questionNumber === 2) {
+                const totalQuestions = Object.keys(correctAnswers).length;
+                feedbackText.textContent = `¡Desafío completado! Obtuviste ${score} de ${totalQuestions} respuestas correctas.`;
+                feedbackText.classList.add(score === totalQuestions ? 'text-green-600' : 'text-red-600');
+            }
+        }
+    </script>
+</body>
+</html>

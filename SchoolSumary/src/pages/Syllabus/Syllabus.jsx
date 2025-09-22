@@ -11,31 +11,25 @@ const defaultUnits = [
 				nombre: 'Unidad 1',
 				temas: [
 					// Corrige aquí: solo el nombre del archivo
-					{ nombre: 'Conceptos básicos', file: 'tema1.html' },
-					{ nombre: 'Historia de la robótica', file: '' },
-					{ nombre: 'Intruducción al Escritorio', file: 'uso-librerias.html' }
-					
+					{ nombre: '', file: '' }
 				]
 			},
 			{
 				nombre: 'Unidad 2',
 				temas: [
-					{ nombre: 'Tipos de robots', file: '' },
-					{ nombre: 'Clasificación de robots', file: '' }
+					{ nombre: '', file: '' }
 				]
 			},
 			{
 				nombre: 'Unidad 3',
 				temas: [
-					{ nombre: 'Sensores básicos', file: '' },
-					{ nombre: 'Actuadores básicos', file: '' }
+					{ nombre: '', file: '' }
 				]
 			},
 			{
 				nombre: 'Unidad 4',
 				temas: [
-					{ nombre: 'Proyecto final', file: '' },
-					{ nombre: 'Presentación', file: '' }
+					{ nombre: '', file: '' }
 				]
 			}
 		]
@@ -48,7 +42,7 @@ const defaultUnits = [
 				nombre: 'Unidad 1',
 				temas: [
 					{ nombre: 'Formato en Word', file: 'tema1.html'},
-					{ nombre: 'Formato en Word1', file: ''}
+					{ nombre: 'Tablas e Imagenes', file: '2.Tablas e Imagenes.html'}
 					
 					
 				]
@@ -56,22 +50,19 @@ const defaultUnits = [
 			{
 				nombre: 'Unidad 2',
 				temas: [
-					{ nombre: 'Sensores de luz', file: '' },
-					{ nombre: 'Motores DC', file: '' }
+					{ nombre: '', file: '' },
 				]
 			},
 			{
 				nombre: 'Unidad 3',
 				temas: [
-					{ nombre: 'Control de velocidad', file: '' },
-					{ nombre: 'PWM', file: '' }
+					{ nombre: '', file: '' }
 				]
 			},
 			{
 				nombre: 'Unidad 4',
 				temas: [
-					{ nombre: 'Proyecto final', file: '' },
-					{ nombre: 'Documentación', file: '' }
+					{ nombre: '', file: '' }
 				]
 			}
 		]
@@ -83,29 +74,25 @@ const defaultUnits = [
 			{
 				nombre: 'Unidad 1',
 				temas: [
-					{ nombre: 'Uso de librerías', file: '' },
-					{ nombre: 'Programación orientada a objetos', file: '' }
+					{ nombre: 'Funciones Excel', file: '1.Funciones Excel.html' }
 				]
 			},
 			{
 				nombre: 'Unidad 2',
 				temas: [
-					{ nombre: 'Depuración de código', file: '' },
-					{ nombre: 'Comunicación serial', file: '' }
+					{ nombre: '', file: '' }
 				]
 			},
 			{
 				nombre: 'Unidad 3',
 				temas: [
-					{ nombre: 'Ejemplo: LED parpadeante', file: '' },
-					{ nombre: 'Ejemplo: Sensor de temperatura', file: '' }
+					{ nombre: '', file: '' }
 				]
 			},
 			{
 				nombre: 'Unidad 4',
 				temas: [
-					{ nombre: 'Proyecto final', file: '' },
-					{ nombre: 'Exposición', file: '' }
+					{ nombre: '', file: '' }
 				]
 			}
 		]
@@ -117,29 +104,25 @@ const defaultUnits = [
 			{
 				nombre: 'Unidad 1',
 				temas: [
-					{ nombre: 'Funciones excel', file: 'Funciones Condicionales.html' },
-					{ nombre: 'Brazo robótico', file: '' }
+					{ nombre: 'Funciones excel', file: '1.Funciones Condicionales.html' }
 				]
 			},
 			{
 				nombre: 'Unidad 2',
 				temas: [
-					{ nombre: 'Robot evasor', file: '' },
-					{ nombre: 'Visión artificial', file: '' }
+					{ nombre: '', file: '' }
 				]
 			},
 			{
 				nombre: 'Unidad 3',
 				temas: [
-					{ nombre: 'IA en robótica', file: '' },
-					{ nombre: 'Control remoto', file: '' }
+					{ nombre: '', file: '' }
 				]
 			},
 			{
 				nombre: 'Unidad 4',
 				temas: [
-					{ nombre: 'Proyecto final', file: '' },
-					{ nombre: 'Informe', file: '' }
+					{ nombre: '', file: '' }
 				]
 			}
 		]
