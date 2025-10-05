@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Datos Nivel Pro en Excel</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #007bff;
+            border: none;
+        }
+
+        p, li {
+            font-size: 1em;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 3px 6px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #c7254e;
+            font-weight: 600;
+        }
+
+        .function-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-left: 5px solid #007bff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .function-box h3 {
+            margin-top: 0;
+            color: #0056b3;
+            border-bottom: none;
+        }
+
+        .consejos, .errores {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .consejos {
+            background-color: #e6ffed;
+            border-left: 5px solid #28a745;
+        }
+        
+        .consejos h3 {
+            color: #155724;
+            border-color: #28a745;
+        }
+
+        .errores {
+            background-color: #fff0f1;
+            border-left: 5px solid #dc3545;
+        }
+
+        .errores h3 {
+            color: #721c24;
+            border-color: #dc3545;
+        }
+
+        .actividad {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .actividad h3 {
+            color: #856404;
+            border-color: #ffc107;
+        }
+
+        .btn-descargar {
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            background-color: #28a745;
+            color: #ffffff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-descargar:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: 600;
+        }
+
+        .highlight-lookup { background-color: #ffc107; }
+        .highlight-lookup-array { background-color: #b8daff; }
+        .highlight-return-array { background-color: #c3e6cb; }
+        .highlight-result { background-color: #9effa8; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>¡Conviértete en un Detective de Datos con Excel! 🕵️‍♂️</h1>
+        <p>
+            ¿Alguna vez te has sentido perdido en un mar de datos, intentando encontrar una sola pieza de información? ¡No te preocupes más! Hoy aprenderás a usar las herramientas más poderosas de Excel para buscar y encontrar exactamente lo que necesitas, ¡como un verdadero detective! Olvídate de buscar manualmente fila por fila.
+        </p>
+
+        <h2>Las Herramientas del Detective de Datos</h2>
+        <p>Vamos a conocer a nuestros nuevos mejores amigos: <code>BUSCARX</code>, y el dúo dinámico <code>INDICE</code> + <code>COINCIDIR</code>.</p>
+
+        <!-- BUSCARX -->
+        <div class="function-box">
+            <h3>🔍 BUSCARX: El Buscador del Futuro</h3>
+            <p>Imagina que tienes una lista de tus artistas favoritos y quieres saber su canción más famosa. <code>BUSCARX</code> es como preguntarle a tu amigo sabelotodo: le das el nombre del artista y te dice la canción al instante. ¡Es súper rápido y flexible!</p>
+            <p><strong>Fórmula:</strong> <code>=BUSCARX(lo_que_buscas, dónde_buscar, qué_devolver)</code></p>
+            
+            <strong>Ejemplo:</strong> Queremos encontrar el <strong>Departamento</strong> de <strong>Ana</strong>.
+            <p>Fórmula: <code>=BUSCARX("Ana", B3:B6, C3:C6)</code></p>
+            <table>
+                <tr><th>ID</th><th>Nombre</th><th>Departamento</th><th>Salario</th></tr>
+                <tr><td>101</td><td style="background-color: #b8daff;">Juan</td><td style="background-color: #c3e6cb;">Ventas</td><td>$1500</td></tr>
+                <tr><td>102</td><td class="highlight-lookup">Ana</td><td class="highlight-result">Marketing</td><td>$1800</td></tr>
+                <tr><td>103</td><td style="background-color: #b8daff;">Luis</td><td style="background-color: #c3e6cb;">Ventas</td><td>$1550</td></tr>
+                <tr><td>104</td><td style="background-color: #b8daff;">María</td><td style="background-color: #c3e6cb;">Recursos Humanos</td><td>$2100</td></tr>
+            </table>
+            <ul>
+                <li><span style="background-color: #ffc107; padding: 2px 5px; border-radius: 3px;">Lo que buscas:</span> "Ana"</li>
+                <li><span style="background-color: #b8daff; padding: 2px 5px; border-radius: 3px;">Dónde buscar (columna de nombres):</span> <code>B3:B6</code></li>
+                <li><span style="background-color: #c3e6cb; padding: 2px 5px; border-radius: 3px;">Qué devolver (columna de departamentos):</span> <code>C3:C6</code></li>
+                <li><span style="background-color: #9effa8; padding: 2px 5px; border-radius: 3px;">Resultado:</span> <strong>Marketing</strong></li>
+            </ul>
+        </div>
+
+        <!-- INDICE + COINCIDIR -->
+        <div class="function-box">
+            <h3>🎯 INDICE + COINCIDIR: El Dúo Dinámico</h3>
+            <p>Este par es como un GPS para tus datos. <code>COINCIDIR</code> te dice la "dirección" (el número de fila) de lo que buscas, e <code>INDICE</code> va a esa dirección y recoge el dato que necesitas. Juntos pueden buscar en cualquier dirección: ¡arriba, abajo, izquierda o derecha!</p>
+            <p><strong>Paso 1: <code>COINCIDIR</code> encuentra la posición.</strong></p>
+            <p><strong>Paso 2: <code>INDICE</code> usa esa posición para obtener el valor.</strong></p>
+            
+            <strong>Ejemplo:</strong> Queremos saber el <strong>salario</strong> de <strong>Luis</strong>.
+            <p>Fórmula: <code>=INDICE(D2:D5, COINCIDIR("Luis", B2:B5, 0))</code></p>
+             <table>
+                <tr><th>ID</th><th>Nombre</th><th>Departamento</th><th>Salario</th></tr>
+                <tr><td>101</td><td>Juan</td><td>Ventas</td><td>$1500</td></tr>
+                <tr><td>102</td><td>Ana</td><td>Marketing</td><td>$1800</td></tr>
+                <tr><td>103</td><td class="highlight-lookup">Luis</td><td>Ventas</td><td class="highlight-result">$1550</td></tr>
+                <tr><td>104</td><td>María</td><td>Recursos Humanos</td><td>$2100</td></tr>
+            </table>
+            <ul>
+                <li>Primero, <code>COINCIDIR("Luis", <span style="background-color: #b8daff; padding: 2px 5px; border-radius: 3px;">B2:B5</span>, 0)</code> busca "Luis" y devuelve la posición: <strong>3</strong>.</li>
+                <li>Luego, <code>INDICE(<span style="background-color: #c3e6cb; padding: 2px 5px; border-radius: 3px;">D2:D5</span>, 3)</code> va a la 3ª posición de la columna de salarios.</li>
+                <li><span style="background-color: #9effa8; padding: 2px 5px; border-radius: 3px;">Resultado:</span> <strong>$1550</strong></li>
+            </ul>
+        </div>
+
+        <!-- Consejos y Errores -->
+        <div class="consejos">
+            <h3>💡 Consejos de Pro</h3>
+            <ul>
+                <li><strong>Sé exacto:</strong> Al usar <code>COINCIDIR</code>, casi siempre querrás usar un <code>0</code> al final para buscar una coincidencia exacta. ¡Así no hay confusiones!</li>
+                <li><strong>Nombra tus rangos:</strong> En lugar de usar <code>A1:A50</code>, puedes nombrar ese rango como "Lista_Nombres". Hará tus fórmulas mucho más fáciles de leer.</li>
+                <li><strong>Cuidado con los espacios:</strong> "Ana" no es lo mismo que "Ana ". Un espacio extra puede arruinar tu búsqueda.</li>
+            </ul>
+        </div>
+        
+        <div class="errores">
+            <h3>😨 ¡Cuidado con los Errores Comunes!</h3>
+            <ul>
+                <li><strong>#N/A:</strong> Significa "No Aplica" o "No encontrado". Es el error más común. Revisa que lo que buscas realmente exista en la lista y que no tenga errores de escritura.</li>
+                <li><strong>#REF!:</strong> ¡Ups! Este error aparece si la fórmula apunta a una celda que ya no existe (porque borraste una fila o columna).</li>
+                <li><strong>#VALOR!:</strong> Ocurre si la fórmula esperaba un número pero le diste texto, o viceversa. Revisa que tus datos estén en el formato correcto.</li>
+            </ul>
+        </div>
+
+        <!-- Actividad -->
+        <div class="actividad">
+            <h3>🚀 ¡Ahora te toca a ti! Misión de Práctica</h3>
+            <p>Descarga el archivo de práctica. Contiene una lista de videojuegos con su género, año de lanzamiento y puntuación. ¡Tu misión es usar las funciones que aprendiste para completar las celdas amarillas!</p>
+            <ol>
+                <li>Usa <strong>BUSCARX</strong> para encontrar el <strong>Año de Lanzamiento</strong> del juego "The Witcher 3".</li>
+                <li>Usa el dúo <strong>INDICE y COINCIDIR</strong> para encontrar la <strong>Puntuación</strong> del juego "Minecraft".</li>
+                <li><strong>Reto extra:</strong> Intenta buscar un juego que no esté en la lista y ve qué error te aparece. ¿Sabes por qué?</li>
+            </ol>
+            <p>¡Juega con las fórmulas, cambia los nombres de los juegos y observa cómo la información se actualiza al instante!</p>
+        </div>
+
+        <!-- Botón de Descarga -->
+        <a href="https://docs.google.com/spreadsheets/d/1rduOG6KpTc_Bs1L9fYsYGfae1DfxrSss/export?format=xlsx" class="btn-descargar" target="_blank">
+            Descargar Archivo de Práctica
+        </a>
+
+    </div>
+</body>
+</html>

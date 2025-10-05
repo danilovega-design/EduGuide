@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel: Formato Condicional con Colores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+        }
+        .gradient-bg { 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+        }
+        .card { 
+            background-color: white; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem; 
+            margin-bottom: 2rem; 
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        h1, h2, h3, h4 { 
+            font-weight: 700; 
+            letter-spacing: -0.5px;
+        }
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+        <!-- Encabezado -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-700">¡Dale Vida a tus Datos! 🎨</h1>
+            <p class="text-lg md:text-xl mt-4 text-gray-600">Aprende a usar el <strong>Formato Condicional</strong> en Excel para que tus números hablen por sí solos.</p>
+        </header>
+
+        <!-- Contenido Principal -->
+        <main>
+            <!-- Sección: ¿Qué es el Formato Condicional? -->
+            <section class="card">
+                <h2 class="text-3xl mb-4 text-blue-600">¿Qué es el Formato Condicional? 🤔</h2>
+                <p class="text-base leading-relaxed">
+                    Imagina que tienes una hoja llena de números, como las calificaciones de todo el curso. Encontrar las notas más altas o las más bajas puede ser como buscar una aguja en un pajar. ¡Aquí es donde entra el <strong>Formato Condicional</strong>!
+                </p>
+                <p class="text-base leading-relaxed mt-4">
+                    Es una herramienta de Excel que cambia automáticamente la apariencia de una celda (su color, fuente, etc.) según su valor. En lugar de leer cada número, puedes hacer que los datos importantes <strong>salten a la vista</strong> con colores. ¡Es como ponerles un resaltador mágico!
+                </p>
+                <div class="mt-6 p-4 bg-gray-100 rounded-lg">
+                    <p class="text-center text-sm text-gray-500 italic">Una tabla normal vs. una tabla con formato condicional. ¿Ves la diferencia?</p>
+                </div>
+            </section>
+
+            <!-- Sección: La Habilidad Clave -->
+            <section class="card">
+                 <h2 class="text-3xl mb-4 text-green-600">Tu Nuevo Superpoder: Ver lo Invisible 🦸‍♀️</h2>
+                 <p class="text-base leading-relaxed">
+                    La habilidad que vas a dominar es aprender a <em>"utilizar el formato condicional para resaltar visualmente patrones, tendencias y valores atípicos en un conjunto de datos, facilitando su interpretación rápida y efectiva."</em>
+                 </p>
+                 <p class="text-base leading-relaxed mt-4">
+                    En palabras más sencillas: vas a convertirte en un detective de datos. Con solo un vistazo, podrás:
+                 </p>
+                 <ul class="list-disc list-inside mt-4 space-y-2">
+                    <li>🚨 <strong>Detectar valores "atípicos":</strong> ¿Alguien sacó un 10 perfecto o una nota muy baja? ¡Lo verás al instante!</li>
+                    <li>📈 <strong>Identificar tendencias:</strong> ¿Las ventas subieron este mes? Los colores te lo mostrarán.</li>
+                    <li>📊 <strong>Comparar datos fácilmente:</strong> Verás quién tiene más puntos en un juego sin tener que leer cada número.</li>
+                </ul>
+            </section>
+
+            <!-- Sección: Cómo Aplicarlo -->
+            <section class="card">
+                 <h2 class="text-3xl mb-4 text-purple-600">¡Manos a la Obra! Guía Paso a Paso</h2>
+                 <p class="mb-6">Aplicar formato condicional es muy fácil. ¡Sigue estos pasos y verás!</p>
+                 
+                 <div class="bg-gray-100 p-4 rounded-lg mb-8">
+                    <h3 class="text-xl font-semibold mb-2">Los Pasos Fundamentales</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Selecciona los datos:</strong> Haz clic y arrastra el ratón para seleccionar todas las celdas que quieres analizar.</li>
+                        <li><strong>Ve a la pestaña Inicio:</strong> En la cinta de opciones de arriba, busca y haz clic en "Inicio".</li>
+                        <li><strong>Encuentra Formato Condicional:</strong> Busca el botón que dice "Formato Condicional".</li>
+                        <li><strong>Elige una opción:</strong> Puedes usar las reglas rápidas (como "Barras de datos") o ir a <strong>"Nueva Regla..."</strong> para tener más control.</li>
+                    </ol>
+                     <div class="mt-4 text-center">
+                        <p class="text-sm text-gray-500 italic">El botón de Formato Condicional está en la pestaña Inicio.</p>
+                    </div>
+                 </div>
+            </section>
+
+            <!-- Sección: Profundizando con "Nueva Regla" -->
+            <section class="card">
+                <h2 class="text-3xl mb-4 text-indigo-600">Profundizando: El Poder de "Nueva Regla" 🧙‍♂️</h2>
+                <p class="mb-6">
+                    Las opciones rápidas son geniales, pero el verdadero poder está en crear tus propias reglas. Esto te da control total sobre cómo y cuándo se colorean tus celdas. Para llegar aquí, sigue la ruta: <strong>Inicio > Formato Condicional > Nueva Regla...</strong>
+                </p>
+
+                <div class="p-4 bg-gray-100 rounded-lg mb-8">
+                    <p class="text-center text-sm text-gray-500 italic">La ventana de "Nueva Regla" te da acceso a todas las opciones.</p>
+                </div>
+
+                <h3 class="text-2xl mb-6 font-bold text-gray-700">¿Qué significa cada tipo de regla?</h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-semibold text-lg">1. Aplicar formato a todas las celdas según sus valores</h4>
+                        <p>Esta es la base para las <strong>escalas de color</strong> y las <strong>barras de datos</strong>. Le dices a Excel que mire todos los números que seleccionaste y les asigne un color o una barra basándose en si son altos, bajos o intermedios.</p>
+                        <p class="mt-2 bg-gray-100 p-2 rounded"><strong>Ejemplo:</strong> Crear una escala de 2 colores que vaya de amarillo (valor más bajo) a verde (valor más alto) para ver el crecimiento de seguidores.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg">2. Aplicar formato únicamente a las celdas que contengan</h4>
+                        <p>Es súper útil para buscar información específica. Puedes resaltar celdas que contengan un número exacto, una palabra, una fecha en particular o incluso celdas que estén en blanco.</p>
+                        <p class="mt-2 bg-gray-100 p-2 rounded"><strong>Ejemplo:</strong> En una lista de tareas, resaltar en rojo todas las celdas que contengan la palabra "Urgente".</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg">3. Aplicar formato únicamente a los valores con rango inferior o superior</h4>
+                        <p>Perfecto para encontrar a los ganadores. Puedes pedirle a Excel que resalte los 10 mejores, los 5 peores, el 10% más alto, etc.</p>
+                        <p class="mt-2 bg-gray-100 p-2 rounded"><strong>Ejemplo:</strong> En una competencia, resaltar en dorado el nombre de los 3 jugadores con la puntuación más alta.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg">4. Aplicar formato a los valores por encima o por debajo del promedio</h4>
+                        <p>Excel calcula el promedio de todos los números que seleccionaste y luego resalta los que están por arriba o por abajo de ese promedio.</p>
+                        <p class="mt-2 bg-gray-100 p-2 rounded"><strong>Ejemplo:</strong> Resaltar en azul a todos los estudiantes cuya calificación esté por encima del promedio del grupo.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg">5. Aplicar formato únicamente a los valores únicos o duplicados</h4>
+                        <p>Esta regla es ideal para limpiar datos. Puede resaltar todos los valores que se repiten (duplicados) o los que aparecen solo una vez (únicos).</p>
+                        <p class="mt-2 bg-gray-100 p-2 rounded"><strong>Ejemplo:</strong> En una lista de invitados, resaltar los nombres duplicados para no enviar dos invitaciones a la misma persona.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg">6. Utilice una fórmula que determine las celdas para aplicar formato</h4>
+                        <p>Esta es la opción más avanzada. Te permite escribir una fórmula lógica (que da como resultado VERDADERO o FALSO). Si es verdadera, la celda se formatea.</p>
+                        <p class="mt-2 bg-gray-100 p-2 rounded"><strong>Ejemplo:</strong> Resaltar toda una fila si la columna "Estado" dice "Entregado".</p>
+                    </div>
+                </div>
+                
+                <hr class="my-8 border-gray-300">
+
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-700">El Paso Final: El Botón "Formato..."</h3>
+                    <p class="mt-2">Una vez que eliges y configuras tu regla, ¡falta el paso más importante! Debes hacer clic en el botón <strong>"Formato..."</strong> para elegir exactamente cómo quieres que se vean las celdas:</p>
+                    <ul class="list-disc list-inside mt-4 space-y-2">
+                        <li><strong>Relleno:</strong> Para elegir el color de fondo de la celda.</li>
+                        <li><strong>Fuente:</strong> Para cambiar el color de la letra, ponerla en negrita o cursiva.</li>
+                        <li><strong>Borde:</strong> Para añadir un borde de color alrededor de la celda.</li>
+                    </ul>
+                    <div class="mt-4 p-4 bg-gray-100 rounded-lg">
+                        <p class="text-center text-sm text-gray-500 italic">Aquí es donde eliges los colores y estilos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección: Actividad Práctica -->
+            <section class="card bg-blue-50 border border-blue-200">
+                <h2 class="text-3xl mb-4 text-blue-800">🚀 ¡Es Hora de Practicar! Actividad: Ventas de la Tienda de Comics</h2>
+                <p class="mb-4">¡Te han contratado para analizar las ventas de una tienda de comics! Tu misión es usar el formato condicional para ayudar al dueño a entender qué productos son los más populares.</p>
+                <ol class="list-decimal list-inside space-y-3">
+                    <li><strong>Descarga el archivo:</strong> Haz clic en el botón de abajo para obtener la hoja de cálculo de Excel.</li>
+                    <li><strong>Analiza las "Unidades Vendidas":</strong> Selecciona la columna de unidades vendidas y aplica <strong>Escalas de Color</strong>. Elige la opción "Escala de colores verde - amarillo - rojo". ¿Qué comics se venden mejor (verde oscuro) y cuáles peor (rojo)?</li>
+                    <li><strong>Destaca los "Ingresos Totales":</strong> Selecciona la columna de ingresos. Usa la opción <strong>Barras de Datos</strong> con el color que más te guste. ¿Qué productos generan más dinero para la tienda?</li>
+                    <li><strong>Encuentra los precios altos:</strong> Selecciona la columna "Precio Unitario". Usa <strong>Nueva Regla... > Aplicar formato únicamente a las celdas que contengan</strong>. Configúrala para resaltar las celdas con valor "mayor que" 15 en color amarillo.</li>
+                </ol>
+                <div class="mt-6 text-center">
+                    <a href="https://docs.google.com/spreadsheets/d/1mouRV_j2LHG9FOOpdV-xu8ygbwaC9MTq/export?format=xlsx" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                        ⬇️ Descargar Archivo de Práctica
+                    </a>
+                </div>
+            </section>
+
+            <!-- Sección: Consejos y Errores -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Consejos -->
+                <section class="card">
+                    <h2 class="text-3xl mb-4 text-yellow-600">Consejos de Pro ✨</h2>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Menos es más:</strong> No uses demasiados colores o reglas a la vez. Podría volverse confuso.</li>
+                        <li><strong>Elige colores lógicos:</strong> Usa verde para lo "bueno" y rojo para la "alerta".</li>
+                        <li><strong>Combina reglas:</strong> Puedes aplicar varias reglas a los mismos datos.</li>
+                        <li><strong>Administra tus reglas:</strong> En "Formato Condicional > Administrar Reglas" puedes ver, editar o borrar las reglas que has creado.</li>
+                    </ul>
+                </section>
+
+                <!-- Errores Comunes -->
+                <section class="card bg-red-50 border border-red-200">
+                    <h2 class="text-3xl mb-4 text-red-700">¡Cuidado! Errores Comunes 😬</h2>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Seleccionar el rango equivocado:</strong> Asegúrate de seleccionar TODAS las celdas correctas antes de crear la regla.</li>
+                        <li><strong>Olvidar los encabezados:</strong> Generalmente, no quieres incluir el título de la columna en tu selección.</li>
+                        <li><strong>Reglas que se contradicen:</strong> Si creas dos reglas que afectan a la misma celda, Excel aplicará la que tenga mayor prioridad. ¡Revísalas en "Administrar Reglas"!</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="text-center mt-8 text-gray-500">
+            <p>&copy; 2025 - Ing. Danilo Vega 30-09 </p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
