@@ -75,7 +75,7 @@ const defaultUnits = [
 				nombre: 'Unidad 1',
 				temas: [
 					{ nombre: 'Funciones Excel', file: '1.Funciones Excel.html' },
-					{ nombre: 'Condicionales Excel', file: '2. Formato Condicionales.html' }
+					{ nombre: 'Condicionales Excel', file: '2.Formato Condicionales.html' }
 				]
 			},
 			{
