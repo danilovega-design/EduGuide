@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Práctica de Funciones de Excel</title>
+    <!-- Incluimos Tailwind CSS para un diseño limpio -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Fuente Inter para un look moderno */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para las fórmulas */
+        code {
+            background-color: #f3f4f6; /* bg-gray-100 */
+            color: #1f2937; /* text-gray-800 */
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem; /* rounded-md */
+            font-family: monospace;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto max-w-4xl p-4 md:p-8">
+        
+        <!-- Encabezado -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">Guía Práctica de Funciones Básicas de Excel</h1>
+            <p class="text-xl text-gray-600">Aprende a resolver problemas comunes paso a paso.</p>
+        </header>
+
+        <main>
+            <!-- Sección 1: Funciones de Resumen -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold text-blue-700 border-b-2 border-blue-200 pb-2 mb-6">Funciones de Resumen</h2>
+
+                <!-- Problema: SUMA -->
+                <article class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <div class="border-b border-gray-200 mb-4 pb-4">
+                        <h3 class="text-2xl font-bold text-blue-800">Análisis: <code>SUMA</code></h3>
+                        <p class="mt-2 text-gray-700">Esta es una de las funciones más fundamentales de Excel. Su propósito es simple: sumar todos los valores numéricos que se encuentran en un rango de celdas (ej. <code>B2:B13</code>) o en celdas individuales (ej. <code>B2, B5, B8</code>).</p>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Problema 1: Total de Ventas</h3>
+                    <p class="mb-4">Una tienda registró las ventas del día en 12 horas. Las ventas por hora están en las celdas <strong>B2</strong> hasta <strong>B13</strong>.</p>
+                    <p class="mb-3">👉 <strong>Calcula el total de ventas del día.</strong></p>
+                    <p class="font-semibold">Fórmula Sugerida: <code>=SUMA(B2:B13)</code></p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>Explicación:</strong> La función <code>SUMA</code> añade todos los valores numéricos que se encuentran en un rango de celdas (en este caso, desde B2 *hasta* B13).</p>
+                </article>
+
+                <!-- Problema: PROMEDIO -->
+                <article class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <div class="border-b border-gray-200 mb-4 pb-4">
+                        <h3 class="text-2xl font-bold text-blue-800">Análisis: <code>PROMEDIO</code></h3>
+                        <p class="mt-2 text-gray-700">Esta función calcula la media aritmética. Suma todos los valores de un rango y luego divide ese total por la cantidad de celdas que contenían números. Es ideal para sacar notas medias, ventas promedio, etc.</p>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Problema 2: Calificación Promedio</h3>
+                    <p class="mb-4">Un estudiante tiene sus calificaciones del semestre en las celdas <strong>C2</strong>, <strong>C3</strong>, <strong>C4</strong> y <strong>C5</strong>.</p>
+                    <p class="mb-3">👉 <strong>Calcula su nota promedio final.</strong></p>
+                    <p class="font-semibold">Fórmula Sugerida: <code>=PROMEDIO(C2:C5)</code></p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>Explicación:</strong> <code>PROMEDIO</code> (o <code>AVERAGE</code> en inglés) suma todos los valores del rango y luego los divide por la cantidad de valores.</p>
+                </article>
+
+                <!-- Problema: MAX y MIN -->
+                <article class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <div class="border-b border-gray-200 mb-4 pb-4">
+                        <h3 class="text-2xl font-bold text-blue-800">Análisis: <code>MAX</code> y <code>MIN</code></h3>
+                        <p class="mt-2 text-gray-700">Estas dos funciones "escanean" un rango de celdas y devuelven un solo valor. <code>MAX</code> encuentra el número más alto (el máximo) y <code>MIN</code> encuentra el número más bajo (el mínimo). Son perfectas para identificar picos y valles en los datos.</p>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Problema 3: Venta Máxima y Mínima</h3>
+                    <p class="mb-4">Usando la misma lista de ventas de la tienda (en <strong>B2:B13</strong>), el gerente quiere saber cuál fue la mejor y la peor hora.</p>
+                    <p class="mb-3">👉 <strong>Encuentra la venta más alta y la venta más baja.</strong></p>
+                    <p class="font-semibold mb-2">Fórmula para la más alta: <code>=MAX(B2:B13)</code></p>
+                    <p class="font-semibold">Fórmula para la más baja: <code>=MIN(B2:B13)</code></p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>Explicación:</strong> <code>MAX</code> devuelve el valor numérico más grande del rango, mientras que <code>MIN</code> devuelve el más pequeño.</p>
+                </article>
+            </section>
+
+            <!-- Sección 2: Operadores Matemáticos -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold text-green-700 border-b-2 border-green-200 pb-2 mb-6">Operadores Matemáticos Básicos</h2>
+                
+                <!-- Problema: Resta y Multiplicación -->
+                <article class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <div class="border-b border-gray-200 mb-4 pb-4">
+                        <h3 class="text-2xl font-bold text-green-800">Análisis: Operadores (<code>-</code>, <code>+</code>, <code>*</code>, <code>/</code>)</h3>
+                        <p class="mt-2 text-gray-700">A diferencia de las funciones, estos son operadores matemáticos básicos. No necesitas un nombre (como <code>SUMA</code>), simplemente los usas entre referencias de celdas (ej. <code>A2-B2</code>). Son la base de los cálculos personalizados y te dan control total sobre la fórmula.</p>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Problema 4: Control de Inventario</h3>
+                    <p class="mb-4">Tienes un inventario inicial de <strong>150</strong> unidades (en <code>A2</code>). Vendiste <strong>45</strong> unidades (en <code>B2</code>). El costo por unidad es de <strong>$5</strong> (en <code>C2</code>).</p>
+                    <p class="mb-3">👉 <strong>Calcula cuántas unidades quedan y el valor total del inventario restante.</strong></p>
+                    <p class="font-semibold mb-2">Unidades restantes: <code>=A2-B2</code></p>
+                    <p class="font-semibold">Valor restante: <code>=(A2-B2)*C2</code></p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>Explicación:</strong> Excel usa los operadores matemáticos estándar: <code>-</code> (resta), <code>+</code> (suma), <code>*</code> (multiplicación) y <code>/</code> (división). Los paréntesis <code>()</code> son cruciales para asegurar el orden correcto de las operaciones.</p>
+                </article>
+
+                <!-- Problema: División -->
+                <article class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Problema 5: Repartir Costos</h3>
+                    <p class="mb-4">El costo total de un proyecto fue de <strong>$800</strong> (en <code>D2</code>) y se debe dividir en partes iguales entre <strong>5</strong> miembros del equipo (en <code>E2</code>).</p>
+                    <p class="mb-3">👉 <strong>Calcula cuánto debe pagar cada miembro.</strong></p>
+                    <p class="font-semibold">Costo por miembro: <code>=D2/E2</code></p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>Explicación:</strong> El operador <code>/</code> divide el primer valor (dividendo) por el segundo (divisor).</p>
+                </article>
+
+                <!-- Problema: Potencia y Raíz -->
+                <article class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <div class="border-b border-gray-200 mb-4 pb-4">
+                        <h3 class="text-2xl font-bold text-green-800">Análisis: <code>POTENCIA</code> y <code>RAIZ</code></h3>
+                        <p class="mt-2 text-gray-700">Estas funciones se usan para cálculos más avanzados. <code>POTENCIA(numero, exponente)</code> (o el atajo <code>^</code>) eleva un número a un exponente. <code>RAIZ(numero)</code> (o <code>SQRT</code> en inglés) es la operación opuesta, encontrando la raíz cuadrada de un número.</p>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Problema 6: Cálculos de Áreas</h3>
+                    <p class="mb-4">Necesitas calcular el área de un terreno cuadrado cuyo lado mide <strong>12</strong> metros (en <code>F2</code>). Por otro lado, tienes un terreno cuadrado con un área de <strong>144</strong> m² (en <code>G2</code>) y necesitas saber cuánto mide un lado.</p>
+                    <p class="mb-3">👉 <strong>Calcula el área (lado al cuadrado) y la medida del lado (raíz cuadrada del área).</strong></p>
+                    <p class="font-semibold mb-2">Área (Potencia): <code>=POTENCIA(F2, 2)</code> o también <code>=F2^2</code></p>
+                    <p class="font-semibold">Lado (Raíz Cuadrada): <code>=RAIZ(G2)</code></p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>Explicación:</strong> <code>POTENCIA(número, exponente)</code> o el símbolo <code>^</code> elevan un número a un exponente. <code>RAIZ(número)</code> (o <code>SQRT</code> en inglés) calcula la raíz cuadrada de un número.</p>
+                </article>
+            </section>
+
+            <!-- Sección 3: Consejos Útiles -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-2 mb-6">Consejos Útiles</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li><strong>Toda fórmula empieza con <code>=</code></strong>: Si olvidas el signo de igual (<code>=</code>), Excel lo tratará como texto simple.</li>
+                        <li><strong>Usa Referencias de Celda:</strong> Es mucho mejor escribir <code>=A1+B1</code> que <code>=100+50</code>. Si los valores en A1 o B1 cambian, el resultado se actualizará automáticamente.</li>
+                        <li><strong>Decimales con Coma (<code>,</code>) vs. Punto (<code>.</code>):</strong> ¡Muy importante! En la mayoría de regiones de habla hispana, Excel usa la <strong>coma (<code>,</code>)</strong> para los decimales (ej. <code>12,50</code>). Si escribes <code>12.50</code>, Excel puede interpretarlo como texto y tus fórmulas (como <code>SUMA</code>) no funcionarán.</li>
+                        <li><strong>El orden importa (PEMDAS):</strong> Excel respeta el orden de las operaciones (Paréntesis, Exponentes, Multiplicación/División, Adición/Sustracción). Usa <code>()</code> para controlar el orden.</li>
+                        <li><strong>Usa el ícono de Autosuma (<code>Σ</code>):</strong> En la pestaña "Inicio", este botón es un atajo rápido para <code>SUMA</code>, <code>PROMEDIO</code>, <code>MAX</code>, etc.</li>
+                        <li><strong>Arrastra la fórmula:</strong> Escribe la fórmula una vez y luego haz clic en el pequeño cuadrado en la esquina inferior derecha de la celda y arrástralo hacia abajo o hacia los lados para copiarla.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Sección 4: Errores Comunes -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold text-red-700 border-b-2 border-red-200 pb-2 mb-6">Errores Comunes y Cómo Solucionarlos</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <ul class="list-disc list-inside space-y-3">
+                        <li>
+                            <strong class="text-red-600"><code>#¡NOMBRE!</code> (<code>#NAME?</code>)</strong>:
+                            <span class="text-gray-700">Escribiste mal el nombre de la función. Revisa que <code>=PROMEDIO</code> no esté escrito como <code>=PROMEDO</code>.</span>
+                        </li>
+                        <li>
+                            <strong class="text-red-600"><code>#¡VALOR!</code> (<code>#VALUE?</code>)</strong>:
+                            <span class="text-gray-700">Intentaste hacer una operación matemática con texto. Ejemplo: <code>=A1+B1</code>, donde B1 contiene la palabra "Hola". Esto también pasa si usas un punto (<code>.</code>) en lugar de una coma (<code>,</code>) para un decimal (ej. <code>10.5</code> en vez de <code>10,5</code>) en una región que usa comas.</span>
+                        </li>
+                        <li>
+                            <strong class="text-red-600"><code>#####</code></strong>:
+                            <span class="text-gray-700">El número es demasiado grande para caber en la celda. ¡No es un error grave! Solo haz la columna más ancha.</span>
+                        </li>
+                        <li>
+                            <strong class="text-red-600"><code>#¡DIV/0!</code></strong>:
+                            <span class="text-gray-700">Intentaste dividir un número entre cero (ej. <code>=10/0</code>) o entre una celda vacía.</span>
+                        </li>
+                        <li>
+                            <strong class="text-red-600">Fórmula no funciona (se ve como texto)</strong>:
+                            <span class="text-gray-700">Probablemente olvidaste poner el signo <code>=</code> al inicio, o la celda tiene formato de "Texto".</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Sección 5: Ejercicios de Práctica -->
+            <section>
+                <h2 class="text-3xl font-semibold text-purple-700 border-b-2 border-purple-200 pb-2 mb-6">¡Ahora te toca a ti! (Ejercicios)</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-600 mb-4">Intenta resolver estos problemas en una hoja de Excel. Los datos de ejemplo puedes inventarlos (ej. pon 5 números en la columna A).</p>
+                    <ol class="list-decimal list-inside space-y-4 text-gray-800">
+                        <li><strong>Lista de Compras:</strong> Tienes 5 productos con precios: $12.50, $8.00, $23.00, $5.50, $10.00. ¿Cuál es el costo total?</li>
+                        <li><strong>Velocidades:</strong> Un auto registró 4 velocidades: 80 km/h, 95 km/h, 120 km/h, 70 km/h. ¿Cuál fue su velocidad promedio?</li>
+                        <li><strong>Puntuaciones:</strong> En un videojuego, 5 jugadores obtuvieron: 1500, 800, 2300, 1100, 1900. ¿Cuál fue la puntuación más baja?</li>
+                        <li><strong>Presupuesto:</strong> Tienes un sueldo de $1500 (en <code>A1</code>). Pagas $400 de alquiler (en <code>B1</code>) y $150 de servicios (en <code>C1</code>). ¿Cuánto dinero te queda?</li>
+                        <li><strong>Descuento:</strong> Un producto cuesta $300 (en <code>A1</code>). Tiene un descuento del 15% (puedes escribir <code>0.15</code> en <code>B1</code>). ¿Cuánto pagas al final? (Pista: Precio - (Precio * Descuento)).</li>
+                        <li><strong>IVA:</strong> El precio de un producto sin IVA es $50 (en <code>A1</code>). El IVA es del 12% (<code>0.12</code> en <code>B1</code>). ¿Cuál es el precio final? (Pista: Precio + (Precio * IVA) o Precio * 1.12).</li>
+                        <li><strong>Temperatura:</strong> Las temperaturas de la semana (7 días) están en <code>C1:C7</code>. ¿Cuál fue la temperatura más alta de la semana?</li>
+                        <li><strong>Repartición de Pizza:</strong> Una pizza costó $18.50 y se divide entre 3 amigos. ¿Cuánto paga cada uno?</li>
+                        <li><strong>Área de Círculo:</strong> La fórmula del área es $\pi \cdot r^2$. Si el radio (r) es <strong>5</strong> (en <code>D1</code>) y Pi es aprox. <strong>3.1416</strong> (en <code>D2</code>). ¿Cuál es el área? (Usa <code>POTENCIA</code> o <code>^</code>).</li>
+                        <li><strong>Inventario Final:</strong> Empezaste con 50 cajas (en <code>A1</code>), recibiste un pedido de 30 cajas (en <code>B1</code>) y vendiste 65 cajas (en <code>C1</code>). ¿Cuántas cajas quedan?</li>
+                    </ol>
+                </div>
+            </section>
+        
+        </main>
+
+        <footer class="text-center mt-12 text-gray-500">
+            <p>&copy; 2025 - Ing. Danilo Vega 30-09. ¡Sigue practicando!</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+

@@ -42,7 +42,9 @@ const defaultUnits = [
 				nombre: 'Unidad 1',
 				temas: [
 					{ nombre: 'Formato en Word', file: 'tema1.html'},
-					{ nombre: 'Tablas e Imagenes', file: '2.Tablas e Imagenes.html'}
+					{ nombre: 'Tablas e Imagenes', file: '2.Tablas e Imagenes.html'},
+					{ nombre: 'Power Point', file: '3.Power Point.html'},
+					{ nombre: 'Transisiones, animaciones y multimedia', file: '4.Transisiones, animaciones y multimedia.html'}
 					
 					
 				]
@@ -75,7 +77,9 @@ const defaultUnits = [
 				nombre: 'Unidad 1',
 				temas: [
 					{ nombre: 'Funciones Excel', file: '1.Funciones Excel.html' },
-					{ nombre: 'Condicionales Excel', file: '2.Formato Condicionales.html' }
+					{ nombre: 'Condicionales Excel', file: '2.Formato Condicionales.html' },
+					{ nombre: 'Problemas en Excel', file: '3.Problemas Excel.html'},
+					{ nombre: 'Gráficos y Análisis', file: '4.Graficos y Analisis.html' }
 				]
 			},
 			{
@@ -106,7 +110,9 @@ const defaultUnits = [
 				nombre: 'Unidad 1',
 				temas: [
 					{ nombre: 'Funciones excel', file: '1.Funciones Condicionales.html' },
-					{ nombre: 'Función Buscar', file: '2. Funcion Condicional.html' }
+					{ nombre: 'Función Condicional', file: '2. Funcion Condicional.html' },
+					{ nombre: 'Tablas Dinamicas', file: '3.Tablas Dinamicas.html' },
+					{ nombre: 'Tablas y Gráficos Avanzados', file: '4.Tablas y Graficos Avanzados.html' }
 				]
 			},
 			{

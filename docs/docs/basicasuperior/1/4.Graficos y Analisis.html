@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Gráficos Dinámicos en Excel</title>
+    <!-- Incluimos Tailwind CSS para un diseño limpio -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Fuente Inter para un look moderno */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* bg-gray-50 */
+        }
+        /* Estilo para las fórmulas */
+        code {
+            background-color: #f3f4f6; /* bg-gray-100 */
+            color: #1f2937; /* text-gray-800 */
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem; /* rounded-md */
+            font-family: monospace;
+            font-size: 0.95em;
+        }
+        .step-number {
+            background-color: #3b82f6; /* bg-blue-500 */
+            color: white;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-right: 0.75rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto max-w-4xl p-4 md:p-8">
+        
+        <!-- Encabezado -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">Introducción a los Gráficos Dinámicos</h1>
+            <p class="text-xl text-gray-600">Analiza tus datos de forma visual e interactiva.</p>
+        </header>
+
+        <main>
+            <!-- Sección 1: ¿Qué es un Gráfico Dinámico? -->
+            <section class="mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-3xl font-semibold text-blue-700 pb-2 mb-4">¿Qué es un Gráfico Dinámico?</h2>
+                    <p class="mb-4">Un Gráfico Dinámico es un gráfico que está <strong>vinculado a una Tabla Dinámica</strong> (PivotTable). La palabra "dinámico" significa que puedes interactuar con él.</p>
+                    <p>A diferencia de un gráfico normal, un gráfico dinámico tiene <strong>botones de filtro</strong> directamente sobre él. Esto te permite cambiar los datos que ves (por ejemplo, ver solo las ventas de "Enero" o de "Zona Norte") sin tener que modificar la fuente de datos original.</p>
+                </div>
+            </section>
+
+            <!-- Sección 2: Cómo crear un Gráfico Dinámico Básico -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold text-green-700 border-b-2 border-green-200 pb-2 mb-6">Cómo Crear uno (Paso a Paso)</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md space-y-6">
+                    <!-- Paso 1 -->
+                    <div class="flex items-start">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Prepara tus Datos</h3>
+                            <p class="text-gray-700">Asegúrate de que tus datos estén en una tabla limpia. Cada columna debe tener un encabezado (ej. "Fecha", "Vendedor", "Producto", "Ventas") y no debe haber filas o columnas en blanco.</p>
+                        </div>
+                    </div>
+                    <!-- Paso 2 -->
+                    <div class="flex items-start">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Inserta el Gráfico Dinámico</h3>
+                            <p class="text-gray-700">Haz clic en cualquier celda dentro de tu tabla de datos. Ve a la pestaña <strong>Insertar</strong> > <strong>Gráfico Dinámico</strong>. Excel seleccionará automáticamente tu tabla.</p>
+                        </div>
+                    </div>
+                    <!-- Paso 3 -->
+                    <div class="flex items-start">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Configura los Campos</h3>
+                            <p class="text-gray-700">Aparecerá un panel a la derecha (Campos de la Tabla Dinámica). Aquí arrastras tus encabezados a las áreas:</p>
+                            <ul class="list-disc list-inside mt-2">
+                                <li><strong>Ejes (Categorías):</strong> Lo que quieres en el eje X (ej. "Vendedor" o "Producto").</li>
+                                <li><strong>Valores:</strong> Lo que quieres medir (ej. "Ventas" o "Cantidad"). Excel los sumará o contará automáticamente.</li>
+                                <li><strong>Leyenda (Series):</strong> Para comparar una segunda variable (ej. "Mes").</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección 3: Analizando con Excel (El Ejemplo) -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-2 mb-6">Ejemplo Práctico: Análisis de Ventas</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">El Problema a Resolver</h3>
+                    <p class="mb-4">Eres el gerente de ventas. Tienes una gran tabla de datos con miles de filas que registran cada venta, incluyendo <strong>Fecha</strong>, <strong>Vendedor</strong>, <strong>Categoría de Producto</strong> y <strong>Total de Venta</strong>. Necesitas responder dos preguntas clave para tu reunión de equipo:</p>
+                    <ul class="list-disc list-inside mb-4 pl-4 text-gray-700">
+                        <li>¿Quién es mi mejor vendedor en términos de ventas totales?</li>
+                        <li>¿En qué categorías se especializa cada vendedor? (Ej. ¿alguien es muy bueno vendiendo "Servicios" pero malo en "Componentes"?)</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">La Solución (El Gráfico Dinámico)</h3>
+                    <p class="mb-4">Usando los pasos de la sección anterior, creas un Gráfico Dinámico. La configuración es la siguiente:</p>
+                    <ul class="list-disc list-inside mb-4 pl-4 text-gray-700">
+                        <li>Arrastras <strong>"Vendedor"</strong> al área de <strong>Ejes</strong>.</li>
+                        <li>Arrastras <strong>"Total de Venta"</strong> al área de <strong>Valores</strong>.</li>
+                        <li>Arrastras <strong>"Categoría de Producto"</strong> al área de <strong>Leyenda (Series)</strong>.</li>
+                    </ul>
+                    <p class="mb-4">El resultado es un gráfico de barras apiladas que te da todas las respuestas de un vistazo:</p>
+
+                    <!-- Imagen de ejemplo simulando el gráfico -->
+                    <div class="my-6 p-4 border border-gray-200 rounded-lg bg-gray-50 flex justify-center">
+                        <img src="https://cdn1.excelyvba.com/wp-content/uploads/2016/04/malos-graficos-en-excel-graficos-dinamicos.jpg" 
+                             alt="Ejemplo de un gráfico dinámico de barras apiladas mostrando ventas por categoría y vendedor"
+                             class="w-full h-auto object-cover rounded shadow-md border">
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Análisis del Gráfico (¿Qué nos dicen los datos?)</h3>
+                    <p class="mb-3">Ahora puedes analizar el gráfico y responder a tus preguntas:</p>
+                    
+                    <div class="space-y-4 text-gray-700">
+                        <p><strong>1. Observación General:</strong> "Este es un gráfico de barras apiladas. Nos muestra las ventas totales de cada vendedor (ANA, CARLOS, LUIS, MARÍA) en el eje horizontal. Lo más importante es que la barra de cada vendedor está dividida en colores, donde cada color representa una 'Categoría' de producto (Accesorios, Componentes, Periféricos, Servicios)."</p>
+                        
+                        <p><strong>2. Hallazgo Principal (Totales):</strong> "Mirando la altura *total* de cada barra, podemos identificar rápidamente quién tiene el mayor volumen de ventas. En este ejemplo, <strong>ANA</strong> tiene la barra más alta, superando los $120,000, lo que la convierte en la vendedora líder en ventas generales. En contraste, <strong>MARÍA</strong> tiene el rendimiento total más bajo."</p>
+                        
+                        <p><strong>3. Hallazgo Específico (Composición):</strong> "Aquí vemos el poder del apilamiento. No solo vemos que LUIS vende mucho (casi $120,000), sino que podemos ver *qué* vende. La gran sección azul ('Componentes') en su barra nos dice que esa es su gran fortaleza. En cambio, la barra de CARLOS es más equilibrada, con porciones similares en todas las categorías."</p>
+                        
+                        <p><strong>4. Hallazgo Comparativo (Entre Categorías):</strong> "Podemos comparar una categoría específica entre todos los vendedores. Si miramos solo el segmento gris ('Servicios'), notamos que <strong>ANA</strong> tiene la porción más grande, lo que la hace líder no solo en total, sino también en esa categoría. En cambio, parece que 'Periféricos' (color naranja) es una categoría fuerte para todos."</p>
+                        
+                        <p><strong>5. La Magia "Dinámica" (La Próxima Pregunta):</strong> "El análisis no se detiene. Gracias a los filtros (arriba y al lado), podríamos preguntarnos: ¿El bajo rendimiento de MARÍA es en todas las fechas? Podríamos usar el filtro <strong>'FECHA'</strong> para ver solo el último mes. O podríamos filtrar por <strong>'CATEGORIA'</strong> y seleccionar solo 'Accesorios' y 'Servicios' para comparar el rendimiento de LUIS y ANA en esas dos áreas. El gráfico cambiaría al instante."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección 4: Errores Comunes -->
+            <section>
+                <h2 class="text-3xl font-semibold text-red-700 border-b-2 border-red-200 pb-2 mb-6">Consejos y Errores Comunes</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Consejos Rápidos</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                        <li><strong>Empieza simple:</strong> Un gráfico de barras (para comparar) o uno circular (para ver partes de un todo) son los mejores para empezar.</li>
+                        <li><strong>Limpia tus datos primero:</strong> El error más común es tener datos "sucios" (celdas vacías, nombres mal escritos como "Ana" y "ana").</li>
+                        <li><strong>Usa los filtros:</strong> La gracia de estos gráficos es hacer clic en ellos y ver cómo cambian los datos.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Errores Comunes</h3>
+                    <ul class="list-disc list-inside space-y-2 text-red-700">
+                        <li><strong>El gráfico no se actualiza:</strong> Si añades *nuevos* datos a tu tabla original, el gráfico no lo verá. Debes hacer clic derecho en el gráfico y seleccionar <strong>Actualizar</strong> (Refresh).</li>
+                        <li><strong>Elegir el gráfico incorrecto:</strong> Usar un gráfico circular (Pie Chart) para comparar 50 vendedores diferentes. Se verá ilegible. Es mejor usar barras.</li>
+                        <li><strong>Datos mal estructurados:</strong> Intentar hacer un gráfico de datos que no tienen encabezados claros. Excel no sabrá qué es "Ejes" y qué es "Valores".</li>
+                    </ul>
+                </div>
+            </section>
+        
+        </main>
+
+        <footer class="text-center mt-12 text-gray-500">
+            <p>&copy; 2025 - Guía de Gráficos Dinámicos. ¡El primer paso al análisis de datos!</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+

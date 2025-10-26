@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión: PowerPoint Magia en Movimiento</title>
+    <!-- Incluimos Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Incluimos una fuente divertida y redondeada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-color: #f0f9ff; /* Un azul cielo muy claro */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        /* Oculta todas las diapositivas por defecto */
+        .slide {
+            display: none;
+        }
+        /* Muestra solo la diapositiva activa */
+        .slide.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto max-w-3xl">
+        
+        <!-- Contenedor de Diapositivas -->
+        <div id="slide-container" class="bg-white p-8 sm:p-12 rounded-2xl shadow-xl border-4 border-purple-300">
+            
+            <!-- Diapositiva 1: Título -->
+            <div class="slide active text-center">
+                <h1 class="text-4xl sm:text-5xl font-bold text-purple-600 mb-4">¡Bienvenido de nuevo, Héroe! 🌟</h1>
+                <p class="text-2xl text-gray-700 mb-6">¡Tu nueva misión es más poderosa!</p>
+                <h2 class="text-3xl font-bold text-yellow-500 mb-8">Misión: ¡Magia en Movimiento! ✨</h2>
+                
+                <p class="text-lg text-gray-600">Aprenderás a hacer que tus presentaciones cobren vida. ¡Vamos! 🎬</p>
+            </div>
+
+            <!-- Diapositiva 2: ¿Qué son las Transiciones? -->
+            <div class="slide text-center">
+                <h2 class="text-3xl font-bold text-purple-600 mb-6">Poder 1: Las Transiciones 🌪️</h2>
+                <p class="text-xl text-gray-700 mb-6">Las transiciones son la forma <strong>MÁGICA</strong> en que aparece una nueva hoja (diapositiva).</p>
+                <p class="text-xl text-gray-700">En lugar de solo "cortar" y cambiar, ¡puedes hacer que se <strong>disuelva</strong>, <strong>empuje</strong> o gire como un <strong>avión de papel</strong>! ✈️</p>
+            </div>
+
+            <!-- Diapositiva 3: Cómo poner Transiciones -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-purple-600 mb-6">¿Cómo uso este poder?</h2>
+                <p class="text-xl text-gray-700 mb-4">¡Es súper fácil!</p>
+                <ol class="list-decimal list-inside space-y-3 text-lg text-gray-700">
+                    <li>Haz clic en la hoja (diapositiva) que quieres que "entre" con estilo.</li>
+                    <li>Busca la pestaña de <strong>"Transiciones"</strong> arriba.</li>
+                    <li>¡Haz clic en las que quieras! Prueba "Desvanecer", "Empujar" o "Barrido".</li>
+                    <li><strong>Súper Tip:</strong> ¡Puedes poner una diferente para cada hoja!</li>
+                </ol>
+                
+            </div>
+
+            <!-- Diapositiva 4: ¿Qué son las Animaciones? -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-green-600 mb-6">Poder 2: Las Animaciones 🤸</h2>
+                <p class="text-xl text-gray-700 mb-4">¡Este es el poder de dar <strong>VIDA</strong> a tus cosas!</p>
+                <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                    <li>Las <strong>Transiciones</strong> mueven la HOJA ENTERA.</li>
+                    <li>Las <strong>Animaciones</strong> mueven UNA SOLA COSA:
+                        <ul>
+                            <li>🐘 Un animal</li>
+                            <li>✍️ Un título o texto</li>
+                            <li>🚀 Un cohete espacial</li>
+                        </ul>
+                    </li>
+                    <li>¡Puedes hacer que <strong>aparezcan</strong>, <strong>giren</strong>, <strong>salten</strong> o se <strong>hagan grandes</strong>!</li>
+                </ul>
+            </div>
+
+            <!-- Diapositiva 5: Cómo poner Animaciones -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-green-600 mb-6">¡Los 3 Tipos de Magia! (Animaciones)</h2>
+                <p class="text-xl text-gray-700 mb-4">¡Al hacer clic en tu animal 🐘 y en la pestaña "Animaciones", verás botones de colores!</p>
+                <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                    <li><strong>Entrada (Verdes 🟢):</strong> Son para <strong>APARECER</strong>. ¡Haz que tu animal entre con un "Zoom"!</li>
+                    <li><strong>Énfasis (Amarillas 🟡):</strong> Son para <strong>MOVERSE EN SU SITIO</strong>. ¡Haz que "Gire" 💫 o "Salte"!</li>
+                    <li><strong>Salida (Rojas 🔴):</strong> Son para <strong>DESAPARECER</strong>. ¡Haz que se vaya "Volando"! 🚀</li>
+                </ul>
+                <p class="text-lg text-gray-700 mt-4">¡Puedes poner una de cada una! Verás numeritos (1️⃣, 2️⃣, 3️⃣) que te dicen el orden. ¡Prueba a animar tu título también!</p>
+                
+            </div>
+
+            <!-- Diapositiva 6: Misión 3 - Multimedia -->
+            <div class="slide text-center">
+                <h2 class="text-3xl font-bold text-red-500 mb-6">Poder 3: ¡Multimedia! 🎵🎬</h2>
+                <p class="text-2xl text-gray-700 mb-6">¡Este es el poder de NIVEL JEFE!</p>
+                <p class="text-xl text-gray-700">"Multimedia" es una palabra elegante para... <strong>¡Videos y Sonidos!</strong></p>
+                <p class="text-xl text-gray-700 font-bold mt-4">Vamos a convertir tu presentación en una película.</p>
+            </div>
+            
+            <!-- Diapositiva 7: Poner Videos -->
+            <div class="slide">
+                <h3 class="text-2xl font-bold text-red-500 mb-4">¡Luz, Cámara, ACCIÓN! 🎬</h3>
+                <p class="text-lg text-gray-700 mb-4">¿Grabaste un video genial o encontraste uno?</p>
+                <ol class="list-decimal list-inside space-y-2 text-lg text-gray-700">
+                    <li>Ve a la pestaña <strong>"Insertar"</strong> (¡nuestra vieja amiga!).</li>
+                    <li>Busca el botón <strong>"Video"</strong> (casi al final, a la derecha).</li>
+                    <li>Elige <strong>"Este dispositivo..."</strong> (significa "desde mi computadora").</li>
+                    <li>¡Busca tu video y listo! <strong>¡PUM!</strong> 💥 ¡Un video dentro de tu hoja!</li>
+                </ol>
+                
+            </div>
+
+            <!-- Diapositiva 8: Poner Música -->
+            <div class="slide">
+                <h3 class="text-2xl font-bold text-red-500 mb-4">¡Sube el Volumen! 🎶</h3>
+                <p class="text-lg text-gray-700 mb-4">¿Quieres música de fondo para tu presentación?</p>
+                <ol class="list-decimal list-inside space-y-2 text-lg text-gray-700">
+                    <li>Ve a la pestaña <strong>"Insertar"</strong>.</li>
+                    <li>Busca el botón <strong>"Audio"</strong> (¡está al lado de "Video"!).</li>
+                    <li>Elige <strong>"Audio en mi PC..."</strong>.</li>
+                    <li>¡Aparecerá un icono de altavoz 🔈! Puedes hacer clic en él para que la música suene en toda tu presentación.</li>
+                </ol>
+                
+            </div>
+
+            <!-- Diapositiva 9: Final -->
+            <div class="slide text-center">
+                <h2 class="text-4xl font-bold text-green-600 mb-6">¡Misión CUMPLIDA, Director! 🏆</h2>
+                <p class="text-xl text-gray-700 mb-6">¡Felicidades! Ahora eres un Maestro de la Magia:</p>
+                <ul class="list-disc list-inside text-left text-xl text-gray-700 space-y-2 max-w-md mx-auto">
+                    <li>✅ Sabes usar <strong>Transiciones</strong> (giros de hoja).</li>
+                    <li>✅ Sabes usar <strong>Animaciones</strong> (dar vida a las fotos).</li>
+                    <li>✅ ¡Sabes poner <strong>Videos</strong> y <strong>Música</strong>!</li>
+                </ul>
+                <p class="text-2xl font-bold text-purple-600 mt-8">¡Tus presentaciones van a ser las más ÉPICAS de todas! 🤩</p>
+                
+            </div>
+
+        </div>
+
+        <!-- Botones de Navegación -->
+        <div class="flex justify-between mt-8 max-w-3xl mx-auto w-full">
+            <button id="prevBtn" class="bg-gray-400 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all duration-200 hover:bg-gray-500 disabled:opacity-50 disabled:cursor-not-allowed">
+                ⬅️ Anterior
+            </button>
+            <button id="nextBtn" class="bg-blue-500 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all duration-200 hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed">
+                Siguiente ➡️
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        // Lógica simple para las diapositivas
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            // Oculta la diapositiva actual
+            slides[currentSlide].classList.remove('active');
+            
+            // Calcula la nueva diapositiva
+            currentSlide = (n + totalSlides) % totalSlides;
+            
+            // Muestra la nueva diapositiva
+            slides[currentSlide].classList.add('active');
+            
+            // Actualiza los botones
+            prevBtn.disabled = (currentSlide === 0);
+            nextBtn.disabled = (currentSlide === totalSlides - 1);
+        }
+
+        // Event Listeners
+        prevBtn.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+        });
+
+        // Inicializa la primera diapositiva y los botones
+        showSlide(0);
+    </script>
+
+</body>
+</html>
+
+
